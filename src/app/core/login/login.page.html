@@ -1,21 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content class="ion-padding">
 
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="onLogin(email, password)" expand="block">Login</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+  </form>
   <ion-row>
-    <ion-col class="text-center">
-      <ion-img class="title-img" src="assets/capacitor.png"></ion-img>
+    <ion-col>
+      <ion-button (click)="signIn()" expand="block" color="primary">
+        Login with Facebook
+      </ion-button>
     </ion-col>
   </ion-row>
+
   <ion-row>
-    <ion-col class="text-center">
-      <ion-text class="title">
+      <ion-col>
+        <ion-button type="submit" (click)="onLoginGoogle()" expand="block" color="danger">Login with Google</ion-button>
+      </ion-col>
+    </ion-row>
 
-      </ion-text>
-    </ion-col>
-  </ion-row>
-
-
-  <ion-button class="login-button" (click)="signIn()" expand="full" fill="solid" color="primary">
-    Login with Facebook
-  </ion-button>
-
+    <ion-row>
+      <ion-col>
+       <p>
+         <a routerLink="/register">Create an account</a>
+       </p>
+      </ion-col>
+      <ion-col>
+        <p>
+          <a routerLink="/forgot-password">Forgot your password?</a>
+        </p>
+       </ion-col>
+    </ion-row>
 </ion-content>

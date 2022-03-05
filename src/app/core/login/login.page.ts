@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { Plugins } from '@capacitor/core';
@@ -9,7 +10,7 @@ import { Plugins } from '@capacitor/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private authSvc: AuthService) { }
 
   ngOnInit() {
   }
@@ -49,4 +50,37 @@ export class LoginPage implements OnInit {
     }
   }
 
+  async onLogin(email, password) {
+    try {
+      const user = await this.authSvc.login(email.value, password.value);
+      if (user) {
+        const isVerified = this.authSvc.isEmailVerified(user);
+        this.redirectUser(isVerified);
+      }
+    }
+    catch (error) {
+      console.log('Error---->', error);
+    }
+  }
+
+  async onLoginGoogle() {
+    try {
+      const user = await this.authSvc.loginGoogle();
+      if (user) {
+        const isVerified = this.authSvc.isEmailVerified(user);
+        this.redirectUser(isVerified);
+      }
+    }
+    catch (error) {
+      console.log('Error-->', error);
+    }
+  }
+
+  private redirectUser(isVerified: boolean) {
+    if (isVerified) {
+      this.router.navigate(['home']);
+    } else {
+      this.router.navigate(['verify-email']);
+    }
+  }
 }
