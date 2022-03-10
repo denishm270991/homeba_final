@@ -76,6 +76,8 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
+@import "bootstrap";
+
 @media (prefers-color-scheme: dark) {
   /*
    * Dark Colors

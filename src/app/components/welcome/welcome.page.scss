@@ -1,0 +1,45 @@
+ion-content#welcome{
+    --background: #fff url('../../../assets/img/welcome/001_with_logo.svg') no-repeat center top / cover;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+}
+.no-scroll{
+    overflow: hidden;
+}
+
+#welcome{   
+    .row-welcome{
+        margin-top: 280px;
+        overflow: auto;
+        height: 250px;
+    } 
+    .select-language{
+        float: right;        
+    }
+    .col img {
+        max-height: 100%;
+        max-width: 100%;
+        display: block;
+        margin: auto;
+      }
+    .logo-welcome{
+        width: 65%;
+        height: auto;
+        margin: auto;
+    }
+    .title1{
+        font-weight: bold;
+        color: darkslategrey;
+        &.title-welcome{
+            text-align: center;
+        }
+    }
+    p{
+        color: darkslategrey;
+    }
+    .button-start, .need-introduction{
+        font-weight: bold;
+        font-size: 20px;
+    }
+}

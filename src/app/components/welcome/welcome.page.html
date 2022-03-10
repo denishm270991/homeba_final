@@ -1,0 +1,54 @@
+<ion-content id="welcome" class="bg-welcome no-scroll">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <ion-select [(ngModel)]="language" class="select-language">
+            <ion-select-option value="es" selected="true">ES</ion-select-option>
+            <ion-select-option value="en">EN</ion-select-option>
+          </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row-welcome">
+      <ion-col size="12">
+        <h1 class="title1 title-welcome" *ngIf="language === 'en'">Welcome!</h1>
+        <h1 class="title1 title-welcome" *ngIf="language === 'es'">¡Bienvenidos!</h1>
+        <p class="text-center" *ngIf="language === 'en'">
+          Thanks for stopping by! We are thrilled to hear that you are interested in buying a home.
+        </p>
+        <p class="text-center" *ngIf="language === 'es'">
+          ¡Gracias por visitarnos! Estamos encantados de saber que está interesado en comprar una casa.
+        </p>
+        <p class="text-center" *ngIf="language === 'en'">
+          We’re a team of professionals helping our clients find their easy way to buy a house and guide them throughout
+          the process.
+        </p>
+        <p class="text-center" *ngIf="language === 'es'">
+          Somos un equipo de profesionales que ayudamos a nuestros clientes a encontrar la manera fácil de comprar un
+          hogar y los guiamos durante todo el proceso.
+        </p>
+        <p class="text-center" *ngIf="language === 'en'">
+          Our work involves answering all your queries, presenting you valuable tips and assisting you to connect with
+          the best professionals in your area.
+        </p>
+        <p class="text-center" *ngIf="language === 'es'">
+          Nuestro trabajo consiste en responder a todas sus consultas, presentarle valiosos consejos y ayudarlo a
+          conectarse con los mejores profesionales en su área.
+        </p>
+      </ion-col>
+      <ion-col size="12">
+        <button type="button" (click)="showSignup()" class="btn btn-primary form-control button-start" *ngIf="language === 'en'">Start</button>
+        <button type="button" (click)="showSignup()" class="btn btn-primary form-control button-start" *ngIf="language === 'es'">Empezar</button>
+      </ion-col>
+      <ion-col size="12">
+        <p class="text-center" *ngIf="language === 'en'">
+          Want to have an introduction call?
+          <a href="#" class="need-introduction">Click here!</a>
+        </p>
+        <p class="text-center" *ngIf="language === 'es'">
+          ¿Quieres tener una llamada de presentación?
+          <a href="#" class="need-introduction">¡Haga clic aquí!</a>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

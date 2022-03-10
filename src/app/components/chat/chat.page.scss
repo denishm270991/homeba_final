@@ -1,0 +1,36 @@
+.card-message{    
+    width: 85%;
+    .content-message{        
+        font-size: 18px;
+        color: white;
+    };
+    &.right{
+        float: right;
+        background-color: rgb(14, 159, 186);
+        
+    }
+    &.left{
+        float: left;
+        background-color: rgb(90, 217, 240);
+    }
+}
+
+textarea {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    background-color: #fff;
+    font-size: 1.2em;
+    resize: none;
+    border: none;
+  }
+ 
+  .chat-bubble {
+    width: 65%;
+    overflow: hidden;
+  }
+  .chat-message {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    white-space: normal;
+  }

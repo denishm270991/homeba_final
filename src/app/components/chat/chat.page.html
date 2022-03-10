@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ user.displayName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #scrollElement>
+  <ion-card *ngFor="let message of messages"
+    [ngClass]="(message.user_sender === user.uid)? 'card-message right' : 'card-message left'">
+    <ion-card-header class="content-message">
+      {{ message.content }}
+    </ion-card-header>
+  </ion-card>
+  <div id="content-end"></div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="10">
+        <ion-input placeholder="Escribe algo..." [(ngModel)]="message"></ion-input>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button expand="block" fill="clear" color="primary" class="msg-btn" (click)="sendMessage()">
+          <ion-icon name="send" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
