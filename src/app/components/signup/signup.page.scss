@@ -3,6 +3,21 @@ ion-content#signup{
     margin-top: 50px;
     width: 100%;
     height: auto;
+
+    .content-icon{
+        margin: 10px;
+        border: 2px solid #0D9EBA;
+        position: absolute;
+        top: 157px;
+        padding: 25px;
+        border-radius: 50%;
+        background-color: white;
+    }
+    .icon-profile{
+        position: absolute;
+        top: 10px;
+        left: 15px;
+    }
 }
 .no-scroll{
     overflow: hidden;
