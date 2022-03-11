@@ -29,3 +29,17 @@
     width: fit-content;
     float: right;
 }
+
+@font-face{
+    font-family: 'SF-PRO-Display-Black';
+    src: local('Display-Black'), url('./assets/fonts/SF-Pro-Display-Black.otf') format('truetype');
+}
+
+@font-face{
+    font-family: 'SF-PRO-Display-Bold';
+    src: local('Display-Black'), url('./assets/fonts/SF-Pro-Display-Bold.otf') format('truetype');
+}
+
+.title1{
+    font-family: 'SF-PRO-Display-Bold';
+}
