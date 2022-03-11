@@ -1,0 +1,11 @@
+{
+    "START": "Comenzar",
+    "WELCOME": "Bienvenido",
+    "CLICK_HERE": "¡Haga clic aquí!",
+    "WELCOME_": {
+        "WELCOME": "¡Gracias por visitarnos! Estamos encantados de saber que está interesado en comprar una casa.",
+        "ABOUT_WE": "Somos un equipo de profesionales que ayudamos a nuestros clientes a encontrar la manera fácil de comprar un hogar y los guiamos durante todo el proceso.",
+        "OUR_WORK": "Nuestro trabajo consiste en responder a todas sus consultas, presentarle valiosos consejos y ayudarlo a conectarse con los mejores profesionales en su área.",
+        "CALL": "¿Quieres tener una llamada de presentación?"
+    }
+}

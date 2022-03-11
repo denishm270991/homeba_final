@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-welcome',
@@ -9,16 +10,22 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class WelcomePage implements OnInit {
   language: string;
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private translate: TranslateService
+  ) {
     this.language = 'es';
+    translate.setDefaultLang('es');
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   showSignup() {
     console.log('yes');
     this.router.navigate(['/signup']);
   }
 
+  onSelectChange(selectedValue: any) {
+    this.translate.setDefaultLang(selectedValue.detail.value);
+  }
 }

@@ -63,7 +63,7 @@ ion-content#signup{
     }
     ion-list{
         background-color: rgb(245, 247, 249);
-        ion-item > .content-item{
+        ion-item .content-item{
             background-color: rgb(245, 247, 249);
             width: 100%;
             .item-inner{
@@ -72,14 +72,28 @@ ion-content#signup{
             .item-native{
                 padding-left: 0 !important;
                 padding-inline-start: 0 !important;
-            }
-       
+            }       
         }
         ion-item {
             --padding-end: 0px;
             --inner-padding-end: 0px;
-            border-bottom: 1px solid;
+            border-bottom: 1px solid grey;
         }
+    }
+}
+.line {
+    border-bottom: 1px solid grey;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    span.or{
+        position: absolute;
+        background-color: rgb(245, 247, 249);
+        top: -10px;
+        left: 43%;
+        padding-left: 7px;
+        padding-right: 7px;
     }
 }
 .no-scroll{
