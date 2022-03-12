@@ -40,6 +40,21 @@
     src: local('Display-Black'), url('./assets/fonts/SF-Pro-Display-Bold.otf') format('truetype');
 }
 
-.title1{
+.title-bold{
     font-family: 'SF-PRO-Display-Bold';
+}
+
+.title-black{
+    font-family: 'SF-PRO-Display-Bold';
+}
+
+.vinculo{
+    color: #0D9EBA;
+}
+
+button.my-color{
+    background-color: #0D9EBA;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
 }
