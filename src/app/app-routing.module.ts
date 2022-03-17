@@ -31,16 +31,17 @@ const routes: Routes = [
   },
   {
     path: 'chat',
-    loadChildren: () => import('./core/chat/chat.module').then(m => m.ChatPageModule)
+    loadChildren: () => import('./content/chat/chat.module').then(m => m.ChatPageModule)
   },
   {
     path: 'welcome',
-    loadChildren: () => import('./core/welcome/welcome.module').then(m => m.WelcomePageModule)
+    loadChildren: () => import('./content/welcome/welcome.module').then(m => m.WelcomePageModule)
   },
   {
     path: 'signup',
-    loadChildren: () => import('./core/signup/signup.module').then(m => m.SignupPageModule)
-  },  {
+    loadChildren: () => import('./content/signup/signup.module').then(m => m.SignupPageModule)
+  },
+  {
     path: 'main-screen',
     loadChildren: () => import('./core/main-screen/main-screen.module').then( m => m.MainScreenPageModule)
   }
