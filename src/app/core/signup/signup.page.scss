@@ -83,7 +83,7 @@ ion-content#signup{
 }
 .line {
     border-bottom: 1px solid grey;
-    width: 90%;
+    width: 87%;
     margin: auto;
     margin-top: 20px;
     position: relative;
@@ -112,9 +112,29 @@ ion-content#signup{
     margin-top: 20px;
 }
 
-.socials-icons div{
-    margin: 10px;
-    background-color: white;
-    padding: 5px;
-    box-shadow: 0 .05rem 0.2rem rgba(0,0,0,0.8);
+.socials-icons{
+    div.circle-content{
+        margin: 10px;
+        background-color: white;
+        width: 50px;
+        height: 50px;    
+        box-shadow: 0 .05rem 0.2rem rgba(0,0,0,0.8);
+        border-radius: 50%;    
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        img.icon-facebook{
+            margin-left: 35%;
+            margin-top: 20%;
+            width: 17px;
+            height: auto;
+        }
+        img.icon-google{
+            margin-left: 25%;
+            margin-top: 25%;
+            width: 25px;
+            height: auto;
+        }
+    }    
 }
