@@ -11,10 +11,26 @@
     "OR": "OR",
     "ALREADY_ACOUNT": "Already have an account?",
     "LOGIN": "Login",
+    "REQUEST_CALL_BACK": "Request a call Back",
+    "CLICK_TO_CHAT": "Click to Chat",
     "WELCOME_": {
-        "WELCOME": "Thanks for stopping by! We are thrilled to hear that you are interested in buying a home.",
+        "WELCOME": "Hey, thanks for stopping by! We are thrilled to hear that you are interested in buying a home.",
         "ABOUT_WE": "We’re a team of professionals helping our clients find their easy way to buy a house and guide them throughout the process.",
-        "OUR_WORK": "Our work involves answering all your queries, presenting you valuable tips and assisting you to connect with the best professionals in your area.",
+        "OUR_WORK": "Our work involves answering all your queries, presenting you valuable tips, and assisting you to connect with the best professionals in your area.",
         "CALL": "Want to have an introduction call?"
+    },
+    "MAIN_SCREEN":{
+        "TITLE": "Buying a house can be an intimidating process, but there is no need to panic we are here to help.",
+        "BUYING_PROCESS": "The process of buying a house.",
+        "CARD_TITLE_ONE": "Get Pre-Approved!",
+        "CARD_BODY_ONE": "Firstly, you need a pre-approval letter to work with a real estate agent. Click here to get your pre-approval letter.",
+        "CARD_TITLE_TWO": "Hire a Real Estate Agent",
+        "CARD_BODY_TWO": "Choose your real estate agent wisely, and it will make a lot of processes easy for you. To contact top agents of your area.",
+        "CARD_TITLE_THREE": "Shop for Your Home",
+        "CARD_BODY_THREE": "You should provide your real estate agent with a list of the priorities you’re looking for in your future house. Click here to see which ones are they.",
+        "CARD_TITLE_FOUR": "Get your Home Inspected and Appraised",
+        "CARD_BODY_FOUR": "Once your offer is approved, you need to start looking for a home inspector in your area. Click to find out what you need to know.",
+        "CARD_TITLE_FIVE": "Close on Your New Home",
+        "CARD_BODY_FIVE": "Before making the deal, have a last thorough self-walk in the house to verify that everything is ok."
     }
 }

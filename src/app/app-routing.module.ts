@@ -44,10 +44,12 @@ const routes: Routes = [
   {
     path: 'main-screen',
     loadChildren: () => import('./core/main-screen/main-screen.module').then( m => m.MainScreenPageModule)
-  },  {
-    path: 'main-screen',
-    loadChildren: () => import('./content/main-screen/main-screen.module').then( m => m.MainScreenPageModule)
+  },
+  {
+    path: 'mainscreen',
+    loadChildren: () => import('./content/mainscreen/mainscreen.module').then( m => m.MainscreenPageModule)
   }
+
 
 
 ];

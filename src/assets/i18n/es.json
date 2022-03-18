@@ -11,10 +11,26 @@
     "OR": "O",
     "ALREADY_ACOUNT": "Ya tienes una cuenta?",
     "LOGIN": "Entrar",
+    "REQUEST_CALL_BACK": "Pida una llamada",
+    "CLICK_TO_CHAT": "Click para Chatear",
     "WELCOME_": {
-        "WELCOME": "¡Gracias por visitarnos! Estamos encantados de saber que está interesado en comprar una casa.",
-        "ABOUT_WE": "Somos un equipo de profesionales que ayudamos a nuestros clientes a encontrar la manera fácil de comprar un hogar y los guiamos durante todo el proceso.",
-        "OUR_WORK": "Nuestro trabajo consiste en responder a todas sus consultas, presentarle valiosos consejos y ayudarlo a conectarse con los mejores profesionales en su área.",
+        "WELCOME": "¡Gracias por visitarnos! Estamos muy emocionados de escuchar que usted está interesado en comprar una casa.",
+        "ABOUT_WE": "Somos un equipo de profesionales que ayudamos a nuestros clientes a encontrar la manera fácil de comprar una casa y los guiamos durante todo el proceso.",
+        "OUR_WORK": "Nuestro trabajo consiste en responder a todas sus preguntas, presentarle valiosos consejos y ayudarlo a conectarse con los mejores profesionales en su área.",
         "CALL": "¿Quieres tener una llamada de presentación?"
+    },
+    "MAIN_SCREEN":{
+        "TITLE": "Comprar una casa puede ser un proceso intimidante, pero no hay necesidad de entrar en pánico, estamos aquí para ayudar.",
+        "BUYING_PROCESS": "El proceso de compra de una casa.",
+        "CARD_TITLE_ONE": "Obtenga una aprobación previa",
+        "CARD_BODY_ONE": "En primer lugar, necesita una carta de aprobación previa para trabajar con un agente inmobiliario. Haga clic aquí para obtener su carta de aprobación previa.",
+        "CARD_TITLE_TWO": "Contrata a un Agente de Bienes Raíces",
+        "CARD_BODY_TWO": "Elija sabiamente a su agente de bienes raíces y le facilitará muchos procesos. Para ponerse en contacto con los mejores agentes de su área.",
+        "CARD_TITLE_THREE": "Compre su hogar",
+        "CARD_BODY_THREE": "Debe proporcionar a su agente de bienes raíces una lista de las prioridades que está buscando en su futura casa. Haga clic aquí para ver cuáles son.",
+        "CARD_TITLE_FOUR": "Inspeccione y evalúe su casa",
+        "CARD_BODY_FOUR": "Una vez que se apruebe su oferta, debe comenzar a buscar un inspector de viviendas en su área. Haga clic para averiguar lo que necesita saber.",
+        "CARD_TITLE_FIVE": "Cierre su nuevo hogar",
+        "CARD_BODY_FIVE": "Antes de hacer el trato, dé un último paseo por la casa para verificar que todo esta bien."
     }
 }
