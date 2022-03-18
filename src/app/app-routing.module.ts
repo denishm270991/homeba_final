@@ -48,7 +48,35 @@ const routes: Routes = [
   {
     path: 'mainscreen',
     loadChildren: () => import('./content/mainscreen/mainscreen.module').then( m => m.MainscreenPageModule)
+  },  {
+    path: 'getpreapproved',
+    loadChildren: () => import('./content/getpreapproved/getpreapproved.module').then( m => m.GetpreapprovedPageModule)
+  },
+  {
+    path: 'get-pre-approved',
+    loadChildren: () => import('./content/get-pre-approved/get-pre-approved.module').then( m => m.GetPreApprovedPageModule)
+  },
+  {
+    path: 'pre-approved-result',
+    loadChildren: () => import('./content/pre-approved-result/pre-approved-result.module').then( m => m.PreApprovedResultPageModule)
+  },
+  {
+    path: 'hire-real-state-agent',
+    loadChildren: () => import('./content/hire-real-state-agent/hire-real-state-agent.module').then( m => m.HireRealStateAgentPageModule)
+  },
+  {
+    path: 'shop-your-home',
+    loadChildren: () => import('./content/shop-your-home/shop-your-home.module').then( m => m.ShopYourHomePageModule)
+  },
+  {
+    path: 'get-your-home-inspected',
+    loadChildren: () => import('./content/get-your-home-inspected/get-your-home-inspected.module').then( m => m.GetYourHomeInspectedPageModule)
+  },
+  {
+    path: 'close-your-new-home',
+    loadChildren: () => import('./content/close-your-new-home/close-your-new-home.module').then( m => m.CloseYourNewHomePageModule)
   }
+
 
 
 
