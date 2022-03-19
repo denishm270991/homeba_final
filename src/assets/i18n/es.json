@@ -13,6 +13,16 @@
     "LOGIN": "Entrar",
     "REQUEST_CALL_BACK": "Pida una llamada",
     "CLICK_TO_CHAT": "Click para Chatear",
+    "ZIP_CODE": "Código postal",
+    "ZIP_CODE_DESCRIPTION": "Código postal (se necesita en caso de que necesitemos conectarlo con un Asistente cerca de usted)",
+    "CREDIT_SCORE": "Puntaje de crédito",
+    "CREDIT_SCORE_DESCRIPTION": "Puntaje de crédito (nos ayudará a entender si está listo)",
+    "MONTLHY_INCOME": "Ingreso Mensual",
+    "MONTHLY_INCOME_DESCRIPTION": "Ingreso Mensual (Cuanto le pagan mensualmente aproximadamente)",
+    "MONTLHY_DEBTS": "Deudas Mensuales",
+    "MONTHLY_DEBTS_DESCRIPTION": "Deudas Mensuales (Suma todos los pagos mínimos de tus tarjetas de crédito + pago del auto + el pago de la hipoteca si tienes otra propiedad)",
+    "ADD_ANOTHER_PERSON": "Añadir Otra Persona",
+    "GET_PRE_APPROVAL_LETTER": "Conseguir Carta de Aprovación",
     "WELCOME_": {
         "WELCOME": "¡Gracias por visitarnos! Estamos muy emocionados de escuchar que usted está interesado en comprar una casa.",
         "ABOUT_WE": "Somos un equipo de profesionales que ayudamos a nuestros clientes a encontrar la manera fácil de comprar una casa y los guiamos durante todo el proceso.",
@@ -32,5 +42,9 @@
         "CARD_BODY_FOUR": "Una vez que se apruebe su oferta, debe comenzar a buscar un inspector de viviendas en su área. Haga clic para averiguar lo que necesita saber.",
         "CARD_TITLE_FIVE": "Cierre su nuevo hogar",
         "CARD_BODY_FIVE": "Antes de hacer el trato, dé un último paseo por la casa para verificar que todo esta bien."
+    },
+    "PRE_APPROVED": {
+        "FIRST_TEXT": "Ahora es más fácil que nunca obtener su carta de aprobación previa y saber si califica para una hipoteca de vivienda o no.",
+        "FILL_SURVEY_FORM": "Por favor complete la siguiente información con la mayor precisión posible."
     }
 }

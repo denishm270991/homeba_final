@@ -13,13 +13,23 @@
     "LOGIN": "Login",
     "REQUEST_CALL_BACK": "Request a call Back",
     "CLICK_TO_CHAT": "Click to Chat",
+    "ZIP_CODE": "Zip Code",
+    "ZIP_CODE_DESCRIPTION": "Zip Code (It is needed just in case that we need to connect you with an Assistant near you)",
+    "CREDIT_SCORE": "Credit Score",
+    "CREDIT_SCORE_DESCRIPTION": "Credit Score (It will help us understand I you are ready)",
+    "MONTHLY_INCOME": "Monthly Income",
+    "MONTHLY_INCOME_DESCRIPTION": "Monthly Income (How much do you approximately get paid monthly)",
+    "MONTHLY_DEBTS": "Monthly Debts",   
+    "MONTHLY_DEBTS_DESCRIPTION": "Monthly Debts (Add up all your credit cards minimum payments + Car payment + the mortgage payment if you own ahother property)", 
+    "ADD_ANOTHER_PERSON": "Add Ahother Person",
+    "GET_PRE_APPROVAL_LETTER": "Get pre-approval Letter",
     "WELCOME_": {
         "WELCOME": "Hey, thanks for stopping by! We are thrilled to hear that you are interested in buying a home.",
         "ABOUT_WE": "We’re a team of professionals helping our clients find their easy way to buy a house and guide them throughout the process.",
         "OUR_WORK": "Our work involves answering all your queries, presenting you valuable tips, and assisting you to connect with the best professionals in your area.",
         "CALL": "Want to have an introduction call?"
     },
-    "MAIN_SCREEN":{
+    "MAIN_SCREEN": {
         "TITLE": "Buying a house can be an intimidating process, but there is no need to panic we are here to help.",
         "BUYING_PROCESS": "The process of buying a house.",
         "CARD_TITLE_ONE": "Get Pre-Approved!",
@@ -32,5 +42,9 @@
         "CARD_BODY_FOUR": "Once your offer is approved, you need to start looking for a home inspector in your area. Click to find out what you need to know.",
         "CARD_TITLE_FIVE": "Close on Your New Home",
         "CARD_BODY_FIVE": "Before making the deal, have a last thorough self-walk in the house to verify that everything is ok."
+    },
+    "PRE_APPROVED": {
+        "FIRST_TEXT": "Now it has become easier to get your pre-approved letter and to know whether you qualify for a house mortgage or not.",
+        "FILL_SURVEY_FORM": "Please fill in the information below as accurately as possible."
     }
 }

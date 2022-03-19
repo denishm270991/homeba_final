@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-get-pre-approved',
   templateUrl: './get-pre-approved.page.html',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetPreApprovedPage implements OnInit {
 
-  constructor() { }
+  language: string;
 
-  ngOnInit() {
+  constructor(
+    private router: Router,
+    private translate: TranslateService
+  ) {
+    this.language = "en";
+    translate.setDefaultLang('en');
   }
 
+  ngOnInit() { }
+
+  onSelectChange(selectedValue: any) {
+    this.translate.setDefaultLang(selectedValue.detail.value);
+  }
+
+  toShowMainScree(){
+    this.router.navigate(['/mainscreen']);
+  }
 }

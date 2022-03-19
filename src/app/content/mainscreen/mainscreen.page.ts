@@ -26,27 +26,27 @@ export class MainscreenPage implements OnInit {
   }
 
   toShowApproved(){
-    console.log('yes');
+    this.router.navigate(['/get-pre-approved']);
   }
 
   toShowEstateAgent(){
-    console.log('yes');
+    this.router.navigate(['/hire-real-state-agent']);
   }
 
   toShowYourHome(){
-    console.log('yes');
+    this.router.navigate(['/shop-your-home']);
   }
 
   toShowHomeInspected(){
-    console.log('yes');
+    this.router.navigate(['/get-your-home-inspected']);
   }
 
   toShowNewHome(){
-    console.log('yes');
+    this.router.navigate(['/close-your-new-home']);
   }
 
   requestCallBack(){
-    console.log('yes');
+    console.log('click buttom request to call');
   }
 
   toShowChat(){

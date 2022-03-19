@@ -48,9 +48,6 @@ const routes: Routes = [
   {
     path: 'mainscreen',
     loadChildren: () => import('./content/mainscreen/mainscreen.module').then( m => m.MainscreenPageModule)
-  },  {
-    path: 'getpreapproved',
-    loadChildren: () => import('./content/getpreapproved/getpreapproved.module').then( m => m.GetpreapprovedPageModule)
   },
   {
     path: 'get-pre-approved',
