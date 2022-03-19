@@ -22,7 +22,12 @@
     "MONTHLY_DEBTS": "Monthly Debts",   
     "MONTHLY_DEBTS_DESCRIPTION": "Monthly Debts (Add up all your credit cards minimum payments + Car payment + the mortgage payment if you own ahother property)", 
     "ADD_ANOTHER_PERSON": "Add Ahother Person",
+    "REMOVE_ANOTHER_PERSON": "Remove Ahother Person",
     "GET_PRE_APPROVAL_LETTER": "Get pre-approval Letter",
+    "FORM_ERROR": {
+        "REQUIRED": "This field is required",
+        "NUMBER": "This field must be only numbers"
+    },
     "WELCOME_": {
         "WELCOME": "Hey, thanks for stopping by! We are thrilled to hear that you are interested in buying a home.",
         "ABOUT_WE": "We’re a team of professionals helping our clients find their easy way to buy a house and guide them throughout the process.",

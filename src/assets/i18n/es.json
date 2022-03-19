@@ -22,7 +22,12 @@
     "MONTLHY_DEBTS": "Deudas Mensuales",
     "MONTHLY_DEBTS_DESCRIPTION": "Deudas Mensuales (Suma todos los pagos mínimos de tus tarjetas de crédito + pago del auto + el pago de la hipoteca si tienes otra propiedad)",
     "ADD_ANOTHER_PERSON": "Añadir Otra Persona",
+    "REMOVE_ANOTHER_PERSON": "Quitar Otra Persona",
     "GET_PRE_APPROVAL_LETTER": "Conseguir Carta de Aprovación",
+    "FORM_ERROR": {
+        "REQUIRED": "Campo requerido",
+        "NUMBER": "Este campo es de solo números"
+    },
     "WELCOME_": {
         "WELCOME": "¡Gracias por visitarnos! Estamos muy emocionados de escuchar que usted está interesado en comprar una casa.",
         "ABOUT_WE": "Somos un equipo de profesionales que ayudamos a nuestros clientes a encontrar la manera fácil de comprar una casa y los guiamos durante todo el proceso.",

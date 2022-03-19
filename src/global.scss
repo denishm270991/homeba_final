@@ -86,7 +86,7 @@
     color: #0D9EBA;
 }
 
-button.my-color{
+button.my-color, button.my-color:focus{
     background-color: #0D9EBA;
     color: white;
     font-weight: bold;
