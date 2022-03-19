@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-pre-approved-result',
   templateUrl: './pre-approved-result.page.html',
@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreApprovedResultPage implements OnInit {
 
-  constructor() { }
+  result: boolean;
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+  ) {
+    this.activatedRoute.params.subscribe(params => {
+      this.result = params.result;
+    });
+  }
 
   ngOnInit() {
   }

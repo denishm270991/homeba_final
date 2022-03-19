@@ -54,7 +54,7 @@ const routes: Routes = [
     loadChildren: () => import('./content/get-pre-approved/get-pre-approved.module').then( m => m.GetPreApprovedPageModule)
   },
   {
-    path: 'pre-approved-result',
+    path: 'pre-approved-result/:result',
     loadChildren: () => import('./content/pre-approved-result/pre-approved-result.module').then( m => m.PreApprovedResultPageModule)
   },
   {
