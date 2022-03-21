@@ -27,68 +27,102 @@
 
 *{
     font-family: 'SF-Pro-Display-Regular';
+    font-size: 16px;
 }
+
+.title{
+    font-size: 20px;
+}
+
 .select-language{
     width: fit-content;
     float: right;
 }
 
-
 @font-face{
     font-family: 'SF-PRO-Display-Black';
     src: local('Display-Black'), url('./assets/fonts/SF-Pro-Display-Black.otf') format('truetype');
+}
+.text-black{
+    font-family: 'SF-PRO-Display-Black';
 }
 
 @font-face{
     font-family: 'SF-PRO-Display-Bold';
     src: local('Display-Bold'), url('./assets/fonts/SF-Pro-Display-Bold.otf') format('truetype');
 }
+.text-bold{
+    font-family: 'SF-PRO-Display-Bold';
+}
 
 @font-face{
     font-family: 'SF-Pro-Display-Heavy';
     src: local('Display-Heavy'), url('./assets/fonts/SF-Pro-Display-Heavy.otf') format('truetype');
+}
+.text-heavy{
+    font-family: 'SF-PRO-Display-Heavy';
 }
 
 @font-face{
     font-family: 'SF-Pro-Display-Light';
     src: local('Display-Light'), url('./assets/fonts/SF-Pro-Display-Light.otf') format('truetype');
 }
+.text-light{
+    font-family: 'SF-PRO-Display-Light';
+}
 
 @font-face{
     font-family: 'SF-Pro-Display-Medium';
     src: local('Display-Medium'), url('./assets/fonts/SF-Pro-Display-Medium.otf') format('truetype');
+}
+.text-medium{
+    font-family: 'SF-PRO-Display-Medium';
 }
 
 @font-face{
     font-family: 'SF-Pro-Display-Regular';
     src: local('Display-Regular'), url('./assets/fonts/SF-Pro-Display-Regular.otf') format('truetype');
 }
+.text-regular{
+    font-family: 'SF-PRO-Display-Regular';
+}
 
 @font-face{
     font-family: 'SF-Pro-Display-Thin';
     src: local('Display-Thin'), url('./assets/fonts/SF-Pro-Display-Thin.otf') format('truetype');
+}
+.text-thin{
+    font-family: 'SF-PRO-Display-Thin';
 }
 
 @font-face{
     font-family: 'SF-Pro-Display-Ultralight';
     src: local('Display-Ultralight'), url('./assets/fonts/SF-Pro-Display-Ultralight.otf') format('truetype');
 }
-
-.title-bold{
-    font-family: 'SF-PRO-Display-Bold';
-}
-
-.title-black{
-    font-family: 'SF-PRO-Display-Bold';
+.text-ultralight{
+    font-family: 'SF-PRO-Display-Ultralight';
 }
 
 .vinculo{
     color: #0D9EBA;
 }
 
-button.my-color, button.my-color:focus{
+button.my-color, button.my-color:focus,
+a.btn.my-color{
     background-color: #0D9EBA;
     color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.bg-gray{
+    font-size: 20px;
+    background-color: rgb(233, 232, 232);
+}
+
+button.my-color-gray, button.my-color:focus{
+    background-color: rgb(167, 164, 164);
+    color: black;
     font-weight: bold;
     font-size: 20px;
 }

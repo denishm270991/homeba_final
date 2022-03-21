@@ -23,7 +23,13 @@
     "MONTHLY_DEBTS_DESCRIPTION": "Monthly Debts (Add up all your credit cards minimum payments + Car payment + the mortgage payment if you own ahother property)", 
     "ADD_ANOTHER_PERSON": "Add Ahother Person",
     "REMOVE_ANOTHER_PERSON": "Remove Ahother Person",
-    "GET_PRE_APPROVAL_LETTER": "Get pre-approval Letter",
+    "GET_PRE_APPROVED_LETTER": "Get pre-approval Letter",
+    "CONGRATULATIONS": "Congratulation!",
+    "VERIFY_INFORMATION": "Verify the information",
+    "BACK_TO_MAIN_SCREEN": "Back to Main Screen",
+    "NOT_APPROVED": "Not Approved!",
+    "MAIN_SCREEN_": "Main Screen",
+
     "FORM_ERROR": {
         "REQUIRED": "This field is required",
         "NUMBER": "This field must be only numbers"
@@ -51,5 +57,17 @@
     "PRE_APPROVED": {
         "FIRST_TEXT": "Now it has become easier to get your pre-approved letter and to know whether you qualify for a house mortgage or not.",
         "FILL_SURVEY_FORM": "Please fill in the information below as accurately as possible."
+    },
+    "PRE_APPROVED_RESULT": {
+        "TITLE": "Get Pre-approved",
+        "SUB_TITLE": "Steps in the process of buying a home.",
+        "MESSAGE": "It is our great pleasure to inform you that you’ve successfully qualified for a house mortgage and now we would just need to verify the information provided by you.",
+        "HOW_WORK": "How does it work?",
+        "STEP_1": "Schedule a meeting to provide us with all the necessary paperwork.",
+        "STEP_2": "Paperwork will be analyzed",
+        "STEP_3": "Pre-approval letter will be issued.",
+        "MESSAGE_LETTER": "Once you get your pre-approval letter, you’ll be licensed to continue with the further steps.",
+        "MESSAGE_NOT": "We regret to inform you that we are unable to approve your request at this time. But not all is lost, we may be able to assist you further.",
+        "MESSAGE_CONTACT": "One of our assistants will contact you with more details." 
     }
 }
