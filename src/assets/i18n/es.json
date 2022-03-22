@@ -69,5 +69,18 @@
         "MESSAGE_LETTER": "Una vez que reciba su carta de aprobación previa, tendrá la licencia para continuar con los pasos posteriores.",
         "MESSAGE_NOT": "Lamentamos informarle que no podemos aprobar su solicitud en este momento. Pero no todo está perdido, es posible que podamos ayudarlo más.",
         "MESSAGE_CONTACT": "Uno de nuestros asistentes se comunicará con usted con más detalles."
+    },
+    "HIRE_REAL_ESTATE_AGENT": {
+        "TITLE": "Contrata a un Agente de Bienes Raíces",
+        "STEP_PROCESS": "Pasos en el proceso de compra de una casa.",
+        "TEXT_1": "Su agente de bienes raíces es su representante durante toda la transacción. Actuando en su mejor interés su agente buscará casas que cumplan con sus criterios, organizará visitas, lo ayudará a redactar ofertas y negociar precios.",
+        "TEXT_2": "Como comprador debe obtener la ayuda de un agente inmobiliario de forma gratuita. En la mayoría de los casos, el vendedor pagará la comisión del agente, que suele ser el 3 % del precio de compra.",
+        "MAKE_SURE": "¡Asegúrate de contratar a la correcta!",
+        "MEET": "Aquí hay algunas preguntas útiles para hacer cuando se reúnan:",
+        "STEP_1": "¿Cuánto tiempo llevas siendo agente inmobiliario?",
+        "STEP_2": "¿Trabaja a tiempo completo o parcial como agente de bienes raíces?",
+        "STEP_3": "¿Cuántas casas ayudas a los clientes a comprar cada año?",
+        "STEP_4": "¿Tiene alguna referencia a la que pueda llamar?",
+        "FINE_BEST_AGENT": "Encuéntrame la mejor agente en mi área"
     }
 }

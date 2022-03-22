@@ -1,9 +1,75 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>hire-real-state-agent</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content id="hire-real-state">
+  <img class="lines-left" src="../../../assets/img/main_screen/lines_main_left.svg" />
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <ion-select class="select-language" (ionChange)="onSelectChange($event)" [(ngModel)]="language">
+          <ion-select-option value="es" selected>ES</ion-select-option>
+          <ion-select-option value="en">EN</ion-select-option>
+        </ion-select>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-8">
+        <h2 class="text-bold hire-estate-title">{{ 'HIRE_REAL_ESTATE_AGENT.TITLE' | translate }}</h2>
+      </div>
+      <div class="col-4">
+        <img class="hire-real-icon-user" src="../../../assets/commons/04-Main Screen (Step-02)-V1.png" alt="Icon of user">
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col">
+        <p class="text-center text-bold">{{ 'HIRE_REAL_ESTATE_AGENT.STEP_PROCESS' | translate }}</p>
+      </div>
+    </div>
+    <div class="line"></div>
+    <br />
+    <div class="row">
+      <div class="col">
+        <p class="text-body">{{ 'HIRE_REAL_ESTATE_AGENT.TEXT_1' | translate }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="text-body">{{ 'HIRE_REAL_ESTATE_AGENT.TEXT_2' | translate }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>{{ 'HIRE_REAL_ESTATE_AGENT.MAKE_SURE' | translate }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>{{ 'HIRE_REAL_ESTATE_AGENT.MEET' | translate }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+       <ol>
+         <li class="text-body">{{ 'HIRE_REAL_ESTATE_AGENT.STEP_1' | translate }}</li>
+         <li class="text-body">{{ 'HIRE_REAL_ESTATE_AGENT.STEP_2' | translate }}</li>
+         <li class="text-body">{{ 'HIRE_REAL_ESTATE_AGENT.STEP_3' | translate }}</li>
+         <li class="text-body">{{ 'HIRE_REAL_ESTATE_AGENT.STEP_4' | translate }}</li>
+       </ol>
+      </div>
+    </div>    
+  </div>
+  <br />
+  <div class="content-buttons">
+    <div class="row mb-2">
+      <div class="col">
+        <button type="button" class="my-color form-control">
+          {{ 'HIRE_REAL_ESTATE_AGENT.FINE_BEST_AGENT' | translate }}</button>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <a routerLink="/mainscreen" class="btn bg-gray form-control" role="button">
+          {{ 'MAIN_SCREEN_' | translate }}</a>
+      </div>
+    </div>
+  </div>  
 </ion-content>

@@ -9,20 +9,11 @@ ion-content#pre-approved-result{
             width: 95%;
             margin: auto;
         }
-        // .content-icon-result{
-        //     padding: 5px;
-        //     background-color: white;
-        //     width: 50px;
-        //     height: 50px;
-        //     box-shadow: 0 .05rem 0.2rem rgba(0,0,0,0.8);
-        //     border-radius: 50%;            
-        //     -webkit-border-radius: 50%;
-        //     -moz-border-radius: 50%;
-        //     -ms-border-radius: 50%;
-        //     -o-border-radius: 50%;
-        // }
         .icon-result{
             float: right;
+        }
+        .icon-result.not-approved{
+            width: 60px;
         }
     }
 }
