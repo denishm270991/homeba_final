@@ -1,11 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IonContent, Platform } from '@ionic/angular';
-
-// import * as firebase from 'firebase/app';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/database';
-import { MessageI } from 'src/app/interfaces/message';
+import { MessageI } from './../../interfaces/message';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDE3IkmgIdxh_NDWuFf78jR5GRv2eelad4',
@@ -75,5 +73,4 @@ export class ChatPage implements OnInit {
     this.message = '';
     this.content.scrollToBottom();
   }
-
 }
