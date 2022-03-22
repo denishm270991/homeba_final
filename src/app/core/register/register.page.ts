@@ -20,7 +20,7 @@ export class RegisterPage implements OnInit {
   ngOnInit() {
   }
   async onRegister(email, password, passwordRepeat) {
-    if(password === passwordRepeat ){
+    if(password.value === passwordRepeat.value ){
       try {
         const user = await this.authSvc.register(email.value, password.value);
         if (user) {
