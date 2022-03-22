@@ -20,5 +20,5 @@ export class SignupPage implements OnInit {
   onSelectChange(selectedValue: any) {
     this.translate.setDefaultLang(selectedValue.detail.value);
   }
-  
+
 }
