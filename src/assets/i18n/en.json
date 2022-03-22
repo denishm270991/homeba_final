@@ -104,5 +104,9 @@
         "STEP_1": "What do you charge for a home inspection?",
         "STEP_2": "How long have you had this job?",
         "STEP_3": "How long will it take to get the results of the inspection?"
+    },
+    "CLOSE_YOUR_HOME": {
+        "TITLE": "Close On Your New Home",
+        "TEXT_1": "Before the closing day you should take the time to do one last walkthrough alone in your new home. Check everything one more time and make sure that the seller has made the repairs you requested and cleared out the property. If everything looks good, you can confidently move ahead. And after closing finishes, you’re officially a homeowner!"
     }
 }

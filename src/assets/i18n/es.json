@@ -100,10 +100,14 @@
     },
     "GET_YOUR_HOME": {
         "TITLE": "Obtenga una inspección de la vivienda y una tasación",
-        "STEP_PROCESS": "Steps in the process of buying a house.",
+        "STEP_PROCESS": "Pasos en el proceso de compra de una casa.",
         "TEXT_1": "Una vez que se apruebe su oferta, debe comenzar a buscar un inspector de viviendas en su área, programar reuniones con al menos 3 profesionales y asegúrese de hacerles las siguientes preguntas:",
         "STEP_1": "¿Cuánto cobran por una inspección de la casa?",
         "STEP_2": "¿Hace cuánto tiempo tiene este trabajo?",
         "STEP_3": "¿Cuánto tiempo tomará obtener los resultados de la inspección?"
+    },
+    "CLOSE_YOUR_HOME": {
+        "TITLE": "Cerrar en su nuevo hogar",
+        "TEXT_1": "Antes del día de cierre, debe tomarse el tiempo para hacer un último recorrido en su nuevo hogar. Verifique todo una vez más y asegúrese de que el vendedor haya realizado las reparaciones que solicitó y haya desalojado la propiedad. Si todo se ve bien, puede seguir adelante con confianza. Y después de que termine el cierre, ¡usted es oficialmente propietario de una casa!"
     }
 }
