@@ -1,0 +1,31 @@
+ion-content#get-your-home{
+    .lines-left{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .container{
+        padding-top: 30px;
+        background-color: rgb(231, 252, 255);
+        .shop-home-icon-user{
+            float: right;
+            margin-top: 10px;
+            width: 50px;
+        }
+        .hire-estate-title{
+            position: relative;
+        }
+        .line{
+            border-bottom: 1px solid grey;
+            width: 95%;
+            margin: auto;
+        }
+        .text-body{
+            text-align: justify;
+        }
+    }
+    .content-buttons{
+        width: 95%;
+        margin: auto;
+    }
+}

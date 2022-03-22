@@ -82,5 +82,28 @@
         "STEP_3": "¿Cuántas casas ayudas a los clientes a comprar cada año?",
         "STEP_4": "¿Tiene alguna referencia a la que pueda llamar?",
         "FINE_BEST_AGENT": "Encuéntrame la mejor agente en mi área"
+    },
+    "SHOP_FOR_YOUR_HOME": {
+        "TITLE": "Busque su hogar y haga una oferta",
+        "STEP_PROCESS": "Pasos en el proceso de compra de una casa.",
+        "TEXT_1": "Precio Antes de que su agente de bienes raíces comience a buscar casas que estén dentro de su presupuesto, debe proporcionarle una lista de sus prioridades. Aquí hay algunas cosas que quizás desee considerar:",
+        "STEP_1": "Precio",
+        "STEP_2": "Pies cuadrados",
+        "STEP_3": "Estado de la vivienda y posible necesidad de reparaciones.",
+        "STEP_4": "Acceso al transporte público",
+        "STEP_5": "Número de habitaciones",
+        "STEP_6": "Patio trasero/piscina",
+        "STEP_7": "Opciones de entretenimiento locales",
+        "STEP_8": "Clasificación del distrito escolar local",
+        "STEP_9": "Tendencias del valor de la propiedad",
+        "TEXT_2": "Cuando haya encontrado una hogar que desea comprar, simplemente pídale a su agente de bienes raíces que escriba una oferta. ¡Eso es todo!"
+    },
+    "GET_YOUR_HOME": {
+        "TITLE": "Obtenga una inspección de la vivienda y una tasación",
+        "STEP_PROCESS": "Steps in the process of buying a house.",
+        "TEXT_1": "Una vez que se apruebe su oferta, debe comenzar a buscar un inspector de viviendas en su área, programar reuniones con al menos 3 profesionales y asegúrese de hacerles las siguientes preguntas:",
+        "STEP_1": "¿Cuánto cobran por una inspección de la casa?",
+        "STEP_2": "¿Hace cuánto tiempo tiene este trabajo?",
+        "STEP_3": "¿Cuánto tiempo tomará obtener los resultados de la inspección?"
     }
 }

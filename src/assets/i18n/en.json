@@ -81,5 +81,28 @@
         "STEP_3": "How many homes do you help clients buy each year?",
         "STEP_4": "Do you have any references I can call?",
         "FINE_BEST_AGENT": "Find me the best Agent in my Area"
+    },
+    "SHOP_FOR_YOUR_HOME": {
+        "TITLE": "Shop for Your Home",
+        "STEP_PROCESS": "Steps in the process of buying a house.",
+        "TEXT_1": "Before your real estate agent begins to look for homes that are within your budget, you should provide the agent with a list of your priorities. Here are some things you might want to consider:",
+        "STEP_1": "Price",
+        "STEP_2": "Square footage",
+        "STEP_3": "Home condition and possible need for repairs",
+        "STEP_4": "Access to public transportation",
+        "STEP_5": "Number of bedrooms",
+        "STEP_6": "Backyard / swimming pool",
+        "STEP_7": "Local entertainment options",
+        "STEP_8": "Local school district ranking",
+        "STEP_9": "Property value trends",
+        "TEXT_2": "When you have found a house that you want to buy, simply ask your real estate agent to write an offer. That’s it!"
+    },
+    "GET_YOUR_HOME": {
+        "TITLE": "Get a Home Inspection and an Appraisal",
+        "STEP_PROCESS": "Steps in the process of buying a house.",
+        "TEXT_1": "Once your offer is approved you need to start looking for a home inspector in your area, schedule meetings with at least 3 professionals, and be sure to ask them the following questions:",
+        "STEP_1": "What do you charge for a home inspection?",
+        "STEP_2": "How long have you had this job?",
+        "STEP_3": "How long will it take to get the results of the inspection?"
     }
 }

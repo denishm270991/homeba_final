@@ -29,10 +29,10 @@ const routes: Routes = [
     path: 'forgot-password',
     loadChildren: () => import('./core/forgot-password/forgot-password.module').then(m => m.ForgotPasswordPageModule)
   },
-  {
-    path: 'chat',
-    loadChildren: () => import('./content/chat/chat.module').then(m => m.ChatPageModule)
-  },
+  // {
+  //   path: 'chat',
+  //   loadChildren: () => import('./content/chat/chat.module').then(m => m.ChatPageModule)
+  // },
   {
     path: 'welcome',
     loadChildren: () => import('./content/welcome/welcome.module').then(m => m.WelcomePageModule)
