@@ -11,10 +11,103 @@
     "OR": "O",
     "ALREADY_ACOUNT": "Ya tienes una cuenta?",
     "LOGIN": "Entrar",
+    "REQUEST_CALL_BACK": "Pida una llamada",
+    "CLICK_TO_CHAT": "Click para Chatear",
+    "ZIP_CODE": "Código postal",
+    "ZIP_CODE_DESCRIPTION": "Código postal (se necesita en caso de que necesitemos conectarlo con un Asistente cerca de usted)",
+    "CREDIT_SCORE": "Puntaje de crédito",
+    "CREDIT_SCORE_DESCRIPTION": "Puntaje de crédito (nos ayudará a entender si está listo)",
+    "MONTLHY_INCOME": "Ingreso Mensual",
+    "MONTHLY_INCOME_DESCRIPTION": "Ingreso Mensual (Cuanto le pagan mensualmente aproximadamente)",
+    "MONTLHY_DEBTS": "Deudas Mensuales",
+    "MONTHLY_DEBTS_DESCRIPTION": "Deudas Mensuales (Suma todos los pagos mínimos de tus tarjetas de crédito + pago del auto + el pago de la hipoteca si tienes otra propiedad)",
+    "ADD_ANOTHER_PERSON": "Añadir Otra Persona",
+    "REMOVE_ANOTHER_PERSON": "Quitar Otra Persona",
+    "GET_PRE_APPROVED_LETTER": "Conseguir Carta de Aprovación",
+    "CONGRATULATIONS": "¡Felicidades!",
+    "VERIFY_INFORMATION": "Verificar Información",
+    "BACK_TO_MAIN_SCREEN": "Volver a la Vista Principal",
+    "NOT_APPROVED": "No Aprovado!",
+    "MAIN_SCREEN_": "Vista Principal",
+
+    "FORM_ERROR": {
+        "REQUIRED": "Campo requerido",
+        "NUMBER": "Este campo es de solo números"
+    },
     "WELCOME_": {
-        "WELCOME": "¡Gracias por visitarnos! Estamos encantados de saber que está interesado en comprar una casa.",
-        "ABOUT_WE": "Somos un equipo de profesionales que ayudamos a nuestros clientes a encontrar la manera fácil de comprar un hogar y los guiamos durante todo el proceso.",
-        "OUR_WORK": "Nuestro trabajo consiste en responder a todas sus consultas, presentarle valiosos consejos y ayudarlo a conectarse con los mejores profesionales en su área.",
+        "WELCOME": "¡Gracias por visitarnos! Estamos muy emocionados de escuchar que usted está interesado en comprar una casa.",
+        "ABOUT_WE": "Somos un equipo de profesionales que ayudamos a nuestros clientes a encontrar la manera fácil de comprar una casa y los guiamos durante todo el proceso.",
+        "OUR_WORK": "Nuestro trabajo consiste en responder a todas sus preguntas, presentarle valiosos consejos y ayudarlo a conectarse con los mejores profesionales en su área.",
         "CALL": "¿Quieres tener una llamada de presentación?"
+    },
+    "MAIN_SCREEN":{
+        "TITLE": "Comprar una casa puede ser un proceso intimidante, pero no hay necesidad de entrar en pánico, estamos aquí para ayudar.",
+        "BUYING_PROCESS": "El proceso de compra de una casa.",
+        "CARD_TITLE_ONE": "Obtenga una aprobación previa",
+        "CARD_BODY_ONE": "En primer lugar, necesita una carta de aprobación previa para trabajar con un agente inmobiliario. Haga clic aquí para obtener su carta de aprobación previa.",
+        "CARD_TITLE_TWO": "Contrata a un Agente de Bienes Raíces",
+        "CARD_BODY_TWO": "Elija sabiamente a su agente de bienes raíces y le facilitará muchos procesos. Para ponerse en contacto con los mejores agentes de su área.",
+        "CARD_TITLE_THREE": "Compre su hogar",
+        "CARD_BODY_THREE": "Debe proporcionar a su agente de bienes raíces una lista de las prioridades que está buscando en su futura casa. Haga clic aquí para ver cuáles son.",
+        "CARD_TITLE_FOUR": "Inspeccione y evalúe su casa",
+        "CARD_BODY_FOUR": "Una vez que se apruebe su oferta, debe comenzar a buscar un inspector de viviendas en su área. Haga clic para averiguar lo que necesita saber.",
+        "CARD_TITLE_FIVE": "Cierre su nuevo hogar",
+        "CARD_BODY_FIVE": "Antes de hacer el trato, dé un último paseo por la casa para verificar que todo esta bien."
+    },
+    "PRE_APPROVED": {
+        "FIRST_TEXT": "Ahora es más fácil que nunca obtener su carta de aprobación previa y saber si califica para una hipoteca de vivienda o no.",
+        "FILL_SURVEY_FORM": "Por favor complete la siguiente información con la mayor precisión posible."
+    },
+    "PRE_APPROVED_RESULT": {
+        "TITLE": "Obtenga una aprobación previa",
+        "SUB_TITLE": "Pasos en el proceso de compra de un hogar.",
+        "MESSAGE": "Ha sido calificado con éxito para una hipoteca de casa y ahora solo necesitamos verificar la información que usted proporcionó.",
+        "HOW_WORK": "¿Como funciona?",
+        "STEP_1": "Programe una reunión para proporcionarnos toda la documentación necesaria.",
+        "STEP_2": "Se analizará la documentación.",
+        "STEP_3": "Se emitirá una carta de aprobación previa.",
+        "MESSAGE_LETTER": "Una vez que reciba su carta de aprobación previa, tendrá la licencia para continuar con los pasos posteriores.",
+        "MESSAGE_NOT": "Lamentamos informarle que no podemos aprobar su solicitud en este momento. Pero no todo está perdido, es posible que podamos ayudarlo más.",
+        "MESSAGE_CONTACT": "Uno de nuestros asistentes se comunicará con usted con más detalles."
+    },
+    "HIRE_REAL_ESTATE_AGENT": {
+        "TITLE": "Contrata a un Agente de Bienes Raíces",
+        "STEP_PROCESS": "Pasos en el proceso de compra de una casa.",
+        "TEXT_1": "Su agente de bienes raíces es su representante durante toda la transacción. Actuando en su mejor interés su agente buscará casas que cumplan con sus criterios, organizará visitas, lo ayudará a redactar ofertas y negociar precios.",
+        "TEXT_2": "Como comprador debe obtener la ayuda de un agente inmobiliario de forma gratuita. En la mayoría de los casos, el vendedor pagará la comisión del agente, que suele ser el 3 % del precio de compra.",
+        "MAKE_SURE": "¡Asegúrate de contratar a la correcta!",
+        "MEET": "Aquí hay algunas preguntas útiles para hacer cuando se reúnan:",
+        "STEP_1": "¿Cuánto tiempo llevas siendo agente inmobiliario?",
+        "STEP_2": "¿Trabaja a tiempo completo o parcial como agente de bienes raíces?",
+        "STEP_3": "¿Cuántas casas ayudas a los clientes a comprar cada año?",
+        "STEP_4": "¿Tiene alguna referencia a la que pueda llamar?",
+        "FINE_BEST_AGENT": "Encuéntrame la mejor agente en mi área"
+    },
+    "SHOP_FOR_YOUR_HOME": {
+        "TITLE": "Busque su hogar y haga una oferta",
+        "STEP_PROCESS": "Pasos en el proceso de compra de una casa.",
+        "TEXT_1": "Precio Antes de que su agente de bienes raíces comience a buscar casas que estén dentro de su presupuesto, debe proporcionarle una lista de sus prioridades. Aquí hay algunas cosas que quizás desee considerar:",
+        "STEP_1": "Precio",
+        "STEP_2": "Pies cuadrados",
+        "STEP_3": "Estado de la vivienda y posible necesidad de reparaciones.",
+        "STEP_4": "Acceso al transporte público",
+        "STEP_5": "Número de habitaciones",
+        "STEP_6": "Patio trasero/piscina",
+        "STEP_7": "Opciones de entretenimiento locales",
+        "STEP_8": "Clasificación del distrito escolar local",
+        "STEP_9": "Tendencias del valor de la propiedad",
+        "TEXT_2": "Cuando haya encontrado una hogar que desea comprar, simplemente pídale a su agente de bienes raíces que escriba una oferta. ¡Eso es todo!"
+    },
+    "GET_YOUR_HOME": {
+        "TITLE": "Obtenga una inspección de la vivienda y una tasación",
+        "STEP_PROCESS": "Pasos en el proceso de compra de una casa.",
+        "TEXT_1": "Una vez que se apruebe su oferta, debe comenzar a buscar un inspector de viviendas en su área, programar reuniones con al menos 3 profesionales y asegúrese de hacerles las siguientes preguntas:",
+        "STEP_1": "¿Cuánto cobran por una inspección de la casa?",
+        "STEP_2": "¿Hace cuánto tiempo tiene este trabajo?",
+        "STEP_3": "¿Cuánto tiempo tomará obtener los resultados de la inspección?"
+    },
+    "CLOSE_YOUR_HOME": {
+        "TITLE": "Cerrar en su nuevo hogar",
+        "TEXT_1": "Antes del día de cierre, debe tomarse el tiempo para hacer un último recorrido en su nuevo hogar. Verifique todo una vez más y asegúrese de que el vendedor haya realizado las reparaciones que solicitó y haya desalojado la propiedad. Si todo se ve bien, puede seguir adelante con confianza. Y después de que termine el cierre, ¡usted es oficialmente propietario de una casa!"
     }
 }

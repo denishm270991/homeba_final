@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { WelcomePageRoutingModule } from './welcome-routing.module';
+import { MainscreenPageRoutingModule } from './mainscreen-routing.module';
 
-import { WelcomePage } from './welcome.page';
+import { MainscreenPage } from './mainscreen.page';
 
 import {  HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -20,7 +20,7 @@ export function createTranslateLoader(http: HttpClient) {
     CommonModule,
     FormsModule,
     IonicModule,
-    WelcomePageRoutingModule,
+    MainscreenPageRoutingModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
@@ -29,6 +29,6 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
-  declarations: [WelcomePage]
+  declarations: [MainscreenPage]
 })
-export class WelcomePageModule { }
+export class MainscreenPageModule {}

@@ -1,0 +1,123 @@
+<ion-content id="main-screen">
+  <img src="../../../assets/img/main_screen/004_main.svg" class="main-screen-image" />
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <ion-select class="select-language select-main-screen" (ionChange)="onSelectChange($event)"
+          [(ngModel)]="language">
+          <ion-select-option value="en" selected>EN</ion-select-option>
+          <ion-select-option value="es">ES</ion-select-option>          
+        </ion-select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h5 class="text-on-image">
+          {{ 'MAIN_SCREEN.TITLE' | translate }}
+        </h5>
+        <h5 class="text-on-image2">
+          <strong>{{ 'MAIN_SCREEN.BUYING_PROCESS' | translate }}</strong>
+        </h5>
+      </div>
+    </div>
+    <!-- ONE -->
+    <div class="row list-card">
+      <div class="col">
+        <div class="card get-aproved" (click)="toShowApproved()">
+          <div class="icon get-aproved">
+            <div class="content-icon">
+              <img src="../../../assets/commons/Approve-icon.png" />
+            </div>
+          </div>
+          <div class="content">
+            <h3 class="text-center text-bold">{{ 'MAIN_SCREEN.CARD_TITLE_ONE' | translate }}</h3>
+            <p class="text-center">{{ 'MAIN_SCREEN.CARD_BODY_ONE' | translate }}</p>
+            <p class="text-center text-vincle text-bold"><u>{{ 'CLICK_HERE' | translate }}</u></p>
+          </div>
+        </div>
+      </div>      
+    </div>
+    <!-- TWO -->
+    <div class="row list-card">
+      <div class="col">
+        <div class="card" (click)="toShowEstateAgent()">
+          <div class="icon">
+            <div class="content-icon">
+              <img src="../../../assets/commons/Hire agent icon.png" />
+            </div>
+          </div>
+          <div class="content">
+            <h3 class="text-center text-bold">{{ 'MAIN_SCREEN.CARD_TITLE_TWO' | translate }}</h3>
+            <p class="text-center">{{ 'MAIN_SCREEN.CARD_BODY_TWO' | translate }}</p>
+            <p class="text-center text-vincle"><strong><u>{{ 'CLICK_HERE' | translate }}</u></strong></p>
+          </div>
+        </div>
+      </div>      
+    </div>
+    <!-- THREE -->
+    <div class="row list-card">
+      <div class="col">
+        <div class="card" (click)="toShowYourHome()">
+          <div class="icon">
+            <div class="content-icon">
+              <img src="../../../assets/commons/Homeshop icon.png" />
+            </div>
+          </div>
+          <div class="content">
+            <h3 class="text-center text-bold">{{ 'MAIN_SCREEN.CARD_TITLE_THREE' | translate }}</h3>
+            <p class="text-center">{{ 'MAIN_SCREEN.CARD_BODY_THREE' | translate }}</p>
+            <p class="text-center text-vincle"><strong><u>{{ 'CLICK_HERE' | translate }}</u></strong></p>
+          </div>
+        </div>
+      </div>      
+    </div>
+    <!-- FOUR -->
+    <div class="row list-card">
+      <div class="col">
+        <div class="card" (click)="toShowHomeInspected()">
+          <div class="icon">
+            <div class="content-icon">
+              <img src="../../../assets/commons/Home inspected icon.png" />
+            </div>
+          </div>
+          <div class="content">
+            <h3 class="text-center text-bold">{{ 'MAIN_SCREEN.CARD_TITLE_FOUR' | translate }}</h3>
+            <p class="text-center">{{ 'MAIN_SCREEN.CARD_BODY_FOUR' | translate }}</p>
+            <p class="text-center text-vincle"><strong><u>{{ 'CLICK_HERE' | translate }}</u></strong></p>
+          </div>
+        </div>
+      </div>      
+    </div>
+    <!-- FIVE -->
+    <div class="row list-card">
+      <div class="col">
+        <div class="card" (click)="toShowNewHome()">
+          <div class="icon">
+            <div class="content-icon">
+              <img src="../../../assets/commons/Home icon.png" />
+            </div>
+          </div>
+          <div class="content">
+            <h3 class="text-center text-bold">{{ 'MAIN_SCREEN.CARD_TITLE_FIVE' | translate }}</h3>
+            <p class="text-center">{{ 'MAIN_SCREEN.CARD_BODY_FIVE' | translate }}</p>
+            <p class="text-center text-vincle"><strong><u>{{ 'CLICK_HERE' | translate }}</u></strong></p>
+          </div>
+        </div>
+      </div>      
+    </div>
+    <br />
+    <div class="row">
+      <div class="col">
+        <button type="button" (click)="requestCallBack()" class="my-color form-control">
+          {{ 'REQUEST_CALL_BACK' | translate }}</button>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col">
+        <a routerLink="/chat" class="btn bg-gray form-control" role="button">
+          {{ 'CLICK_TO_CHAT' | translate }}</a>
+      </div>
+    </div> -->
+  </div>
+</ion-content>

@@ -2,12 +2,13 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IonContent, Platform } from '@ionic/angular';
 import firebase from 'firebase/compat/app';
-import 'firebase/compat/database';
-import { MessageI } from './../../interfaces/message';
+
+import 'firebase/compat/database'
+import { MessageI } from '../../interfaces/message';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDE3IkmgIdxh_NDWuFf78jR5GRv2eelad4',
-  authDomain: 'hba2022-e5821.firebaseapp.com',
+  authDomain: "hba2022-e5821.firebaseapp.com",
   databaseURL: 'https://hba2022-e5821-default-rtdb.firebaseio.com',
   projectId: 'hba2022-e5821',
   storageBucket: 'hba2022-e5821.appspot.com',

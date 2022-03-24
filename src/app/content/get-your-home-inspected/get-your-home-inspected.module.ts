@@ -4,23 +4,21 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { WelcomePageRoutingModule } from './welcome-routing.module';
+import { GetYourHomeInspectedPageRoutingModule } from './get-your-home-inspected-routing.module';
 
-import { WelcomePage } from './welcome.page';
-
+import { GetYourHomeInspectedPage } from './get-your-home-inspected.page';
 import {  HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
-
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    WelcomePageRoutingModule,
+    GetYourHomeInspectedPageRoutingModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
@@ -29,6 +27,6 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
-  declarations: [WelcomePage]
+  declarations: [GetYourHomeInspectedPage]
 })
-export class WelcomePageModule { }
+export class GetYourHomeInspectedPageModule {}

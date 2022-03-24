@@ -1,0 +1,19 @@
+
+ion-content#pre-approved-result{
+    --ion-background-color: rgb(231, 252, 255);
+    .container{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .line{
+            border-bottom: 1px solid grey;
+            width: 95%;
+            margin: auto;
+        }
+        .icon-result{
+            float: right;
+        }
+        .icon-result.not-approved{
+            width: 60px;
+        }
+    }
+}

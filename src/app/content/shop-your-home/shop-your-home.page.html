@@ -1,0 +1,70 @@
+<ion-content id="shop-your-home">
+  <img class="lines-left" src="../../../assets/img/main_screen/lines_main_left.svg" />
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <ion-select class="select-language" (ionChange)="onSelectChange($event)" [(ngModel)]="language">
+          <ion-select-option value="es" selected>ES</ion-select-option>
+          <ion-select-option value="en">EN</ion-select-option>
+        </ion-select>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-9">
+        <h2 class="text-bold hire-estate-title">{{ 'SHOP_FOR_YOUR_HOME.TITLE' | translate }}</h2>
+      </div>
+      <div class="col-3">
+        <img class="shop-home-icon-user" src="../../../assets/commons/04-Main Screen (Step-03)-V1.png" alt="Icon of user">
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col">
+        <p class="text-center text-bold">{{ 'SHOP_FOR_YOUR_HOME.STEP_PROCESS' | translate }}</p>
+      </div>
+    </div>
+    <div class="line"></div>
+    <br />
+    <div class="row">
+      <div class="col">
+        <p class="text-body">{{ 'SHOP_FOR_YOUR_HOME.TEXT_1' | translate }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+       <ul>
+         <li class="text-body">{{ 'SHOP_FOR_YOUR_HOME.STEP_1' | translate }}</li>
+         <li class="text-body">{{ 'SHOP_FOR_YOUR_HOME.STEP_2' | translate }}</li>
+         <li class="text-body">{{ 'SHOP_FOR_YOUR_HOME.STEP_3' | translate }}</li>
+         <li class="text-body">{{ 'SHOP_FOR_YOUR_HOME.STEP_4' | translate }}</li>
+         <li class="text-body">{{ 'SHOP_FOR_YOUR_HOME.STEP_5' | translate }}</li>
+         <li class="text-body">{{ 'SHOP_FOR_YOUR_HOME.STEP_6' | translate }}</li>
+         <li class="text-body">{{ 'SHOP_FOR_YOUR_HOME.STEP_7' | translate }}</li>
+         <li class="text-body">{{ 'SHOP_FOR_YOUR_HOME.STEP_8' | translate }}</li>
+         <li class="text-body">{{ 'SHOP_FOR_YOUR_HOME.STEP_9' | translate }}</li>
+       </ul>
+      </div>
+    </div>    
+    <div class="row">
+      <div class="col">
+        <p class="text-body">{{ 'SHOP_FOR_YOUR_HOME.TEXT_2' | translate }}</p>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="content-buttons">
+    <div class="row mb-2">
+      <div class="col">
+        <a routerLink="/mainscreen" class="btn my-color form-control" role="button">
+          {{ 'MAIN_SCREEN_' | translate }}</a>
+      </div>
+    </div>
+    <!-- <div class="row mb-3">
+      <div class="col">
+        <a routerLink="/chat" class="btn bg-gray form-control" role="button">
+          {{ 'CLICK_TO_CHAT' | translate }}</a>
+      </div>
+    </div> -->
+  </div>  
+</ion-content>

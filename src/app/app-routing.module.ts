@@ -29,10 +29,10 @@ const routes: Routes = [
     path: 'forgot-password',
     loadChildren: () => import('./core/forgot-password/forgot-password.module').then(m => m.ForgotPasswordPageModule)
   },
-  {
-    path: 'chat',
-    loadChildren: () => import('./content/chat/chat.module').then(m => m.ChatPageModule)
-  },
+  // {
+  //   path: 'chat',
+  //   loadChildren: () => import('./content/chat/chat.module').then(m => m.ChatPageModule)
+  // },
   {
     path: 'welcome',
     loadChildren: () => import('./content/welcome/welcome.module').then(m => m.WelcomePageModule)
@@ -44,7 +44,38 @@ const routes: Routes = [
   {
     path: 'main-screen',
     loadChildren: () => import('./core/main-screen/main-screen.module').then( m => m.MainScreenPageModule)
+  },
+  {
+    path: 'mainscreen',
+    loadChildren: () => import('./content/mainscreen/mainscreen.module').then( m => m.MainscreenPageModule)
+  },
+  {
+    path: 'get-pre-approved',
+    loadChildren: () => import('./content/get-pre-approved/get-pre-approved.module').then( m => m.GetPreApprovedPageModule)
+  },
+  {
+    path: 'pre-approved-result/:result',
+    loadChildren: () => import('./content/pre-approved-result/pre-approved-result.module').then( m => m.PreApprovedResultPageModule)
+  },
+  {
+    path: 'hire-real-state-agent',
+    loadChildren: () => import('./content/hire-real-state-agent/hire-real-state-agent.module').then( m => m.HireRealStateAgentPageModule)
+  },
+  {
+    path: 'shop-your-home',
+    loadChildren: () => import('./content/shop-your-home/shop-your-home.module').then( m => m.ShopYourHomePageModule)
+  },
+  {
+    path: 'get-your-home-inspected',
+    loadChildren: () => import('./content/get-your-home-inspected/get-your-home-inspected.module').then( m => m.GetYourHomeInspectedPageModule)
+  },
+  {
+    path: 'close-your-new-home',
+    loadChildren: () => import('./content/close-your-new-home/close-your-new-home.module').then( m => m.CloseYourNewHomePageModule)
   }
+
+
+
 
 ];
 

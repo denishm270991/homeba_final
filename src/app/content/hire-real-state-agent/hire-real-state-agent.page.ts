@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.page.html',
-  styleUrls: ['./signup.page.scss'],
+  selector: 'app-hire-real-state-agent',
+  templateUrl: './hire-real-state-agent.page.html',
+  styleUrls: ['./hire-real-state-agent.page.scss'],
 })
-export class SignupPage implements OnInit {
+export class HireRealStateAgentPage implements OnInit {
+
   language: string;
     
   constructor(private translate: TranslateService) {
-    this.language = "es";
-    translate.setDefaultLang('es');
+    this.language = "en";
+    translate.setDefaultLang('en');
   }
 
   ngOnInit() {
@@ -20,5 +20,4 @@ export class SignupPage implements OnInit {
   onSelectChange(selectedValue: any) {
     this.translate.setDefaultLang(selectedValue.detail.value);
   }
-
 }
