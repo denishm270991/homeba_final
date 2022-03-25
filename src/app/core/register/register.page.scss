@@ -19,7 +19,7 @@ ion-content#signup{
           margin-top: 10px;
           position: relative;
           height: 200px;
-          background-color: rgb(245, 247, 249);
+          background-color: #f5f7f9;
           .content-icon{
               left: 30px;
               border: 2px solid #0D9EBA;
@@ -60,11 +60,12 @@ ion-content#signup{
   .row.boton-signup{
       margin: auto;
       width: 95%;
+      background-color: #f5f7f9;
   }
   ion-list{
-      background-color: rgb(245, 247, 249);
+      background-color: #f5f7f9;
       ion-item .content-item{
-          background-color: rgb(245, 247, 249);
+          background-color: #f5f7f9;
           width: 100%;
           .item-inner{
               padding-right: 0 !important;
@@ -81,20 +82,25 @@ ion-content#signup{
       }
   }
 }
+.content-line{
+    width: 100%;
+    background-color: #f5f7f9;
+    position: relative;
+    span.or{
+        position: absolute;
+        background-color: #f5f7f9;
+        top: 10px;
+        left: 46%;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+}
 .line {
   border-bottom: 1px solid grey;
   width: 87%;
   margin: auto;
-  margin-top: 20px;
-  position: relative;
-  span.or{
-      position: absolute;
-      background-color: rgb(245, 247, 249);
-      top: -10px;
-      left: 43%;
-      padding-left: 7px;
-      padding-right: 7px;
-  }
+  padding-top: 20px;
+  background-color: #f5f7f9;  
 }
 .no-scroll{
   overflow: hidden;
@@ -109,7 +115,12 @@ ion-content#signup{
 .socials-icons{
   display: inherit;
   justify-content: center;
-  margin-top: 20px;
+  padding-top: 20px;
+  background-color: #f5f7f9;
+}
+
+.last-text{
+    background-color: #f5f7f9;
 }
 
 .socials-icons{

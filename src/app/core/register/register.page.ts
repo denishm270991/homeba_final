@@ -13,8 +13,8 @@ export class RegisterPage implements OnInit {
   language: string;
 
   constructor(private authSvc: AuthService, private router: Router, private translate: TranslateService) {
-    this.language = 'es';
-    translate.setDefaultLang('es');
+    this.language = 'en';
+    translate.setDefaultLang('en');
   }
 
   ngOnInit() {

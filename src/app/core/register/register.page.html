@@ -19,7 +19,7 @@
       </div>
       <div class="row content-form">
         <div class="col">
-          <h1 class="title-black signup">{{ 'SIGN_UP' | translate }}</h1>
+          <h1 class="text-bold signup">{{ 'SIGN_UP' | translate }}</h1>
         </div>
       </div>
       <div class="row content-list">
@@ -51,9 +51,11 @@
       <div class="row boton-signup">
         <button type="button" class="my-color form-control" (click)="onRegister(email, password, passwordRepeat)">{{ 'SIGN_UP' | translate }}</button>
       </div>
-      <div class="line">
+      <div class="content-line">
         <span class="or">{{ 'OR' | translate }}</span>
+        <div class="line"></div>
       </div>
+     
       <div class="socials-icons">
           <div class="circle-content">
             <img src="../../../assets/icon/FB-icon.png" class="icon-facebook" />
@@ -62,7 +64,7 @@
             <img src="../../../assets/icon/Google-icon.png" class="icon-google" />
           </div>
       </div>
-      <div>
+      <div class="last-text">
         <p class="text-center">{{ 'ALREADY_ACOUNT' | translate }}
           <span class="title-black vinculo"><strong><a routerLink="/login">{{ 'LOGIN' | translate }}</a></strong></span>
         </p>
