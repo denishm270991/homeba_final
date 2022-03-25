@@ -29,6 +29,10 @@
     "BACK_TO_MAIN_SCREEN": "Back to Main Screen",
     "NOT_APPROVED": "Not Approved!",
     "MAIN_SCREEN_": "Main Screen",
+    "REQUEST_PASSWORD_RESET": "Request Password Reset",
+    "FORGOT_PASSWORD": "Forgot Password",
+    "EMAIL": "Email",
+
     "FORM_ERROR": {
         "REQUIRED": "This field is required",
         "NUMBER": "This field must be only numbers"

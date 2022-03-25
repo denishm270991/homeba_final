@@ -29,6 +29,9 @@
     "BACK_TO_MAIN_SCREEN": "Volver a la Vista Principal",
     "NOT_APPROVED": "No Aprovado!",
     "MAIN_SCREEN_": "Vista Principal",
+    "REQUEST_PASSWORD_RESET": "Petición para Recuperación de Contraseña",
+    "FORGOT_PASSWORD": "Has olvidado tu contraseña",
+    "EMAIL": "Correo Electrónico",
 
     "FORM_ERROR": {
         "REQUIRED": "Campo requerido",
