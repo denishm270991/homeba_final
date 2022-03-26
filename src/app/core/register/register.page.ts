@@ -41,10 +41,10 @@ export class RegisterPage implements OnInit {
   onSelectChange(selectedValue: any) {
     this.translate.setDefaultLang(selectedValue.detail.value);
   }
-  
+
   private redirectUser(isVerified: boolean) {
     if (isVerified) {
-      this.router.navigate(['home']);
+      this.router.navigate(['mainscreen']);
     } else {
       this.router.navigate(['verify-email']);
     }

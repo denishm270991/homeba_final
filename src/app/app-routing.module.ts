@@ -47,7 +47,8 @@ const routes: Routes = [
   },
   {
     path: 'mainscreen',
-    loadChildren: () => import('./content/mainscreen/mainscreen.module').then( m => m.MainscreenPageModule)
+    loadChildren: () => import('./content/mainscreen/mainscreen.module').then( m => m.MainscreenPageModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'get-pre-approved',
@@ -67,7 +68,8 @@ const routes: Routes = [
   },
   {
     path: 'get-your-home-inspected',
-    loadChildren: () => import('./content/get-your-home-inspected/get-your-home-inspected.module').then( m => m.GetYourHomeInspectedPageModule)
+    loadChildren: () => import('./content/get-your-home-inspected/get-your-home-inspected.module')
+    .then( m => m.GetYourHomeInspectedPageModule)
   },
   {
     path: 'close-your-new-home',

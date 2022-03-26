@@ -36,13 +36,13 @@ export class LoginPage implements OnInit {
     try {
       console.log(result);
       if (result && result.accessToken) {
-        const user = { token: result.accessToken.token, userId: result.accessToken.userId }
+        const user = { token: result.accessToken.token, userId: result.accessToken.userId };
         const navigationExtras: NavigationExtras = {
           queryParams: {
             userinfo: JSON.stringify(user)
           }
         };
-        this.router.navigate(['/home'], navigationExtras);
+        this.router.navigate(['/mainscreen'], navigationExtras);
       }
     } catch (e) {
       console.log(e);
@@ -60,7 +60,7 @@ export class LoginPage implements OnInit {
           userinfo: JSON.stringify(user)
         }
       };
-      this.router.navigate(['/home'], navigationExtras);
+      this.router.navigate(['/mainscreen'], navigationExtras);
     }
   }
 
@@ -92,7 +92,7 @@ export class LoginPage implements OnInit {
 
   private redirectUser(isVerified: boolean) {
     if (isVerified) {
-      this.router.navigate(['home']);
+      this.router.navigate(['mainscreen']);
     } else {
       this.router.navigate(['verify-email']);
     }
