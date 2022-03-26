@@ -32,7 +32,7 @@
     "REQUEST_PASSWORD_RESET": "Petición para Recuperación de Contraseña",
     "FORGOT_PASSWORD": "Has olvidado tu contraseña",
     "EMAIL": "Correo Electrónico",
-
+ 
     "FORM_ERROR": {
         "REQUIRED": "Campo requerido",
         "NUMBER": "Este campo es de solo números"

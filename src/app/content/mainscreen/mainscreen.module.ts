@@ -8,6 +8,8 @@ import { MainscreenPageRoutingModule } from './mainscreen-routing.module';
 
 import { MainscreenPage } from './mainscreen.page';
 
+import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
+
 import {  HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';

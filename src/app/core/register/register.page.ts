@@ -37,9 +37,11 @@ export class RegisterPage implements OnInit {
       console.log('error');
     }
   }
+
   onSelectChange(selectedValue: any) {
     this.translate.setDefaultLang(selectedValue.detail.value);
   }
+  
   private redirectUser(isVerified: boolean) {
     if (isVerified) {
       this.router.navigate(['home']);

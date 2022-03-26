@@ -2,21 +2,35 @@ import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { Plugins } from '@capacitor/core';
-
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  language: string;
 
-  constructor(private router: Router, private authSvc: AuthService) { }
+  constructor(
+    private router: Router,
+    private authSvc: AuthService,
+    private translate: TranslateService
+  ) {
+    this.language = 'en';
+    translate.setDefaultLang('en');
+  }
 
   ngOnInit() {
   }
+
+  onSelectChange(selectedValue: any) {
+    this.translate.setDefaultLang(selectedValue.detail.value);
+  }
+
   ionViewWillEnter() {
     this.getCurrentState();
   }
+
   async getCurrentState() {
     const result = await Plugins.FacebookLogin.getCurrentAccessToken();
     try {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
 
 @Component({
   selector: 'app-mainscreen',
@@ -12,7 +13,8 @@ export class MainscreenPage implements OnInit {
 
   constructor(
     private router: Router,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private emailComposer: EmailComposer
   ) { 
     this.language = "en";
     translate.setDefaultLang('en');
@@ -46,10 +48,26 @@ export class MainscreenPage implements OnInit {
   }
 
   requestCallBack(){
-    console.log('click buttom request to call');
+    let email = {
+      to: 'denishm270991@gmail.com',
+      cc: 'denishm910927@gmail.com',
+      // attachments: [
+      //   'file://img/logo.png',
+      //   'res://icon.png',
+      //   'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
+      //   'file://README.pdf'
+      // ],
+      subject: 'Cordova Email',
+      body: 'Hello, this is functione',
+      isHtml: true
+    }
+    
+    // Send a text message using default options
+    this.emailComposer.open(email);
   }
 
   toShowChat(){
     this.router.navigate(['/chat']);
   }
+
 }
