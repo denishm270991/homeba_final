@@ -15,8 +15,8 @@ export class MainscreenPage implements OnInit {
     private router: Router,
     private translate: TranslateService,
     private emailComposer: EmailComposer
-  ) { 
-    this.language = "en";
+  ) {
+    this.language = 'en';
     translate.setDefaultLang('en');
   }
 
@@ -48,7 +48,7 @@ export class MainscreenPage implements OnInit {
   }
 
   requestCallBack(){
-    let email = {
+    const email = {
       to: 'denishm270991@gmail.com',
       cc: 'denishm910927@gmail.com',
       // attachments: [
@@ -60,8 +60,8 @@ export class MainscreenPage implements OnInit {
       subject: 'Cordova Email',
       body: 'Hello, this is functione',
       isHtml: true
-    }
-    
+    };
+
     // Send a text message using default options
     this.emailComposer.open(email);
   }

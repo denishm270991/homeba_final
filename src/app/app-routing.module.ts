@@ -42,10 +42,6 @@ const routes: Routes = [
     loadChildren: () => import('./content/signup/signup.module').then(m => m.SignupPageModule)
   },
   {
-    path: 'main-screen',
-    loadChildren: () => import('./core/main-screen/main-screen.module').then( m => m.MainScreenPageModule)
-  },
-  {
     path: 'mainscreen',
     loadChildren: () => import('./content/mainscreen/mainscreen.module').then( m => m.MainscreenPageModule),
     canActivate: [AuthGuard],
