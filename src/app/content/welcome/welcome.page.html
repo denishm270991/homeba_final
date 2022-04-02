@@ -1,4 +1,6 @@
 <ion-content id="welcome" class="bg-welcome no-scroll">
+  <img src='../../../assets/img/welcome/welcome_right.svg' alt="Image with lines" class="right">
+  <img src='../../../assets/img/welcome/welcome_left.svg' alt="Image with lines" class="left">
   <ion-grid>
     <ion-row>
       <ion-col>
@@ -8,22 +10,28 @@
         </ion-select>
       </ion-col>
     </ion-row>
-    <ion-row class="row-welcome">
-      <ion-col size="12">
-        <h1 class="title1 title-welcome">{{ 'WELCOME' | translate }}</h1>
-        <p class="text-center">{{ 'WELCOME_.WELCOME' | translate }}</p>
-        <p class="text-center">{{ 'WELCOME_.ABOUT_WE' | translate }}</p>
-        <p class="text-center">{{ 'WELCOME_.OUR_WORK' | translate }}</p>
-      </ion-col>
-      <ion-col size="12">
-        <button type="button" (click)="showSignup()" class="my-color form-control button-start">{{ 'START' |
-          translate }}</button>
-      </ion-col>
-      <ion-col size="12">
-        <p class="text-center">{{ 'WELCOME_.CALL' | translate }}
-          <a href="#" class="need-introduction">{{ 'CLICK_HERE' | translate }}</a>
-        </p>
-      </ion-col>
-    </ion-row>
+    <p class="text-center content-logo">
+      <img src='../../../assets/commons/Home Buyer Assistant Blue-Green copy.svg' alt="Image with lines" class="logo">
+    </p>
+    <div class="simulate-canvas">
+      <img src='../../../assets/img/welcome/canvas.png' alt="Image Canvas" class="canvas">
+      <ion-row class="row-welcome">
+        <ion-col size="12">
+          <h1 class="title1 title-welcome">{{ 'WELCOME' | translate }}</h1>
+          <p class="text-center">{{ 'WELCOME_.WELCOME' | translate }}</p>
+          <p class="text-center">{{ 'WELCOME_.ABOUT_WE' | translate }}</p>
+          <p class="text-center">{{ 'WELCOME_.OUR_WORK' | translate }}</p>
+        </ion-col>
+        <ion-col size="12">
+          <button type="button" (click)="showSignup()" class="my-color form-control button-start">{{ 'START' |
+            translate }}</button>
+        </ion-col>
+        <ion-col size="12">
+          <p class="text-center">{{ 'WELCOME_.CALL' | translate }}
+            <a href="#" class="need-introduction">{{ 'CLICK_HERE' | translate }}</a>
+          </p>
+        </ion-col>
+      </ion-row>
+    </div>      
   </ion-grid>
 </ion-content>

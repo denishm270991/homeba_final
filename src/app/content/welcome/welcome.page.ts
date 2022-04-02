@@ -14,8 +14,8 @@ export class WelcomePage implements OnInit {
     private router: Router,
     private translate: TranslateService
   ) {
-    this.language = 'es';
-    translate.setDefaultLang('es');
+    this.language = 'en';
+    translate.setDefaultLang('en');
   }
 
   ngOnInit() { }
