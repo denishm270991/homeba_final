@@ -10,21 +10,23 @@ ion-content#welcome{
     img.right{
         position: absolute;
         right: 0;
-        width: 150px;
+        width: 130px;
     }
     img.left{
         position: absolute;
         left: -20px;
         top: 40px;
+        width: 70px;
     }
     .content-logo{
-        margin-top: 15px;
-        margin-bottom: 70px;
+        margin-top: 10px;
+        margin-bottom: 50px;
         img.logo{
             width: 170px;
         }
     }
     .simulate-canvas{
+        height: calc(100vh - 150px);
        img.canvas{
            position: absolute; 
        }
@@ -36,8 +38,10 @@ ion-content#welcome{
 
 #welcome{   
     .row-welcome{
-        overflow: auto;
-        height: calc(100vh - 280px);
+        overflow: auto;        
+        p.text-p{
+            margin-bottom: 5px;
+        }
     } 
     .select-language{
         float: right;        
