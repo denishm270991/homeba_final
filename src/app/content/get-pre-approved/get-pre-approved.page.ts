@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { StorageService } from '../../services/storage.service';
 @Component({
   selector: 'app-get-pre-approved',
   templateUrl: './get-pre-approved.page.html',
@@ -20,7 +20,8 @@ export class GetPreApprovedPage implements OnInit {
   constructor(
     private router: Router,
     private translate: TranslateService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private storage: StorageService
   ) {
     this.language = "en";
     translate.setDefaultLang('en');
@@ -40,12 +41,28 @@ export class GetPreApprovedPage implements OnInit {
       monthlyIncome2: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       monthlyDebts2: ['', [Validators.required, Validators.pattern('^[0-9]+$')]]
     });
+    this.getLanguage();
   }
 
   ngOnInit() { }
 
+  getLanguage() {
+    this.storage.getString('language').then((data: any) => {
+      if (data.value) {
+        this.language = data.value;
+        this.translate.setDefaultLang(this.language);
+      } else {
+        this.language = 'en';
+        this.storage.setString('language', this.language);
+        this.translate.setDefaultLang(this.language);
+      }
+    });
+  }
+
   onSelectChange(selectedValue: any) {
-    this.translate.setDefaultLang(selectedValue.detail.value);
+    this.language = selectedValue.detail.value;
+    this.translate.setDefaultLang(this.language);
+    this.storage.setString('language', this.language);
   }
 
   toShowMainScree() {
@@ -94,7 +111,7 @@ export class GetPreApprovedPage implements OnInit {
           result = true;
         }
       }
-    }   
+    }
     this.router.navigate(['/pre-approved-result', result]);
   }
 

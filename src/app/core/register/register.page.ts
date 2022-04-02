@@ -2,7 +2,7 @@ import { Router } from '@angular/router';
 import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
+import { StorageService } from '../../services/storage.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -12,15 +12,39 @@ export class RegisterPage implements OnInit {
 
   language: string;
 
-  constructor(private authSvc: AuthService, private router: Router, private translate: TranslateService) {
-    this.language = 'en';
-    translate.setDefaultLang('en');
+  constructor(
+    private authSvc: AuthService,
+    private router: Router,
+    private translate: TranslateService,
+    private storage: StorageService
+  ) {
+    this.getLanguage();
   }
 
   ngOnInit() {
   }
+
+  getLanguage() {
+    this.storage.getString('language').then((data: any) => {
+      if (data.value) {
+        this.language = data.value;
+        this.translate.setDefaultLang(this.language);
+      } else {
+        this.language = 'en';
+        this.storage.setString('language', this.language);
+        this.translate.setDefaultLang(this.language);
+      }
+    });
+  }
+
+  onSelectChange(selectedValue: any) {
+    this.language = selectedValue.detail.value;
+    this.translate.setDefaultLang(this.language);
+    this.storage.setString('language', this.language);
+  }
+
   async onRegister(email, password, passwordRepeat) {
-    if(password.value === passwordRepeat.value ){
+    if (password.value === passwordRepeat.value) {
       try {
         const user = await this.authSvc.register(email.value, password.value);
         if (user) {
@@ -32,14 +56,10 @@ export class RegisterPage implements OnInit {
       catch (error) {
         console.log('Error-->', error);
       }
-    }else{
+    } else {
       //write error code here
       console.log('error');
     }
-  }
-
-  onSelectChange(selectedValue: any) {
-    this.translate.setDefaultLang(selectedValue.detail.value);
   }
 
   private redirectUser(isVerified: boolean) {

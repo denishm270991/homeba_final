@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { StorageService } from '../../services/storage.service';
 @Component({
   selector: 'app-pre-approved-result',
   templateUrl: './pre-approved-result.page.html',
@@ -14,20 +15,33 @@ export class PreApprovedResultPage implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private translate: TranslateService,
+    private storage: StorageService
   ) {
     this.activatedRoute.params.subscribe(params => {
       this.result = params.result;
     });
-    this.language = 'en';
-    translate.setDefaultLang('en');
+    this.getLanguage();
   }
 
   ngOnInit() {
   }
+  getLanguage() {
+    this.storage.getString('language').then((data: any) => {
+      if (data.value) {
+        this.language = data.value;
+        this.translate.setDefaultLang(this.language);
+      } else {
+        this.language = 'en';
+        this.storage.setString('language', this.language);        
+        this.translate.setDefaultLang(this.language);
+      }
+    });
+  }
 
   onSelectChange(selectedValue: any) {
-    console.log('enter here');
-    this.translate.setDefaultLang(selectedValue.detail.value);
+    this.language = selectedValue.detail.value;
+    this.translate.setDefaultLang(this.language);
+    this.storage.setString('language', this.language);
   }
 
 }

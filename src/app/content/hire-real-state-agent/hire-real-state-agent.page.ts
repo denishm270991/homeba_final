@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { StorageService } from '../../services/storage.service';
 @Component({
   selector: 'app-hire-real-state-agent',
   templateUrl: './hire-real-state-agent.page.html',
@@ -8,16 +9,33 @@ import { TranslateService } from '@ngx-translate/core';
 export class HireRealStateAgentPage implements OnInit {
 
   language: string;
-    
-  constructor(private translate: TranslateService) {
-    this.language = "en";
-    translate.setDefaultLang('en');
+
+  constructor(
+    private translate: TranslateService,
+    private storage: StorageService
+  ) {
+    this.getLanguage();
   }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  getLanguage() {
+    this.storage.getString('language').then((data: any) => {
+      if (data.value) {
+        this.language = data.value;
+        this.translate.setDefaultLang(this.language);
+      } else {
+        this.language = 'en';
+        this.storage.setString('language', this.language);
+        this.translate.setDefaultLang(this.language);
+      }
+    });
   }
 
   onSelectChange(selectedValue: any) {
-    this.translate.setDefaultLang(selectedValue.detail.value);
+    this.language = selectedValue.detail.value;
+    this.translate.setDefaultLang(this.language);
+    this.storage.setString('language', this.language);
   }
+
 }
