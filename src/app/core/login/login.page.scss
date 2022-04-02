@@ -10,7 +10,6 @@ ion-content#login{
         color: #0D9EBA;
     }
     .vincle-no-style{
-        font-size: 20px;
         color: #0D9EBA;
     }
     .container{
@@ -145,6 +144,9 @@ ion-content#login{
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
+        &.active{
+            border: 2px solid #0D9EBA;
+        }
         img.icon-facebook{
             margin-left: 35%;
             margin-top: 20%;
@@ -155,7 +157,7 @@ ion-content#login{
             margin-left: 25%;
             margin-top: 25%;
             width: 25px;
-            height: auto;
+            height: auto;           
         }
     }
   }

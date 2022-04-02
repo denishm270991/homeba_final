@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-
+import { Storage } from '@capacitor/storage';
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.page.html',
@@ -14,6 +14,11 @@ export class WelcomePage implements OnInit {
     private router: Router,
     private translate: TranslateService
   ) {
+    const checkName = async () => {
+      const { value } = await Storage.get({ key: 'language' });
+    
+      console.log(`Hello ${value}!`);
+    };
     this.language = 'en';
     translate.setDefaultLang('en');
   }

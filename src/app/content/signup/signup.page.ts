@@ -8,10 +8,14 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class SignupPage implements OnInit {
   language: string;
+  classFacebook: string;
+  classGoogle: string;
     
   constructor(private translate: TranslateService) {
     this.language = "en";
     translate.setDefaultLang('en');
+    this.classFacebook = 'circle-content inactive';
+    this.classGoogle = 'circle-content inactive';
   }
 
   ngOnInit() {

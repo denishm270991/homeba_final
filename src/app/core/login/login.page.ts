@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { Plugins } from '@capacitor/core';
 import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -10,6 +11,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LoginPage implements OnInit {
   language: string;
+  classFacebook: string;
+  classGoogle: string;
 
   constructor(
     private router: Router,
@@ -18,6 +21,8 @@ export class LoginPage implements OnInit {
   ) {
     this.language = 'en';
     translate.setDefaultLang('en');
+    this.classFacebook = 'circle-content inactive';
+    this.classGoogle = 'circle-content inactive';
   }
 
   ngOnInit() {
@@ -49,7 +54,8 @@ export class LoginPage implements OnInit {
     }
   }
 
-  async signIn(): Promise<void> {
+  async signIn(): Promise<void> {  
+    this.classFacebook = 'circle-content active';
     const FACEBOOK_PERMISSIONS = ['public_profile', 'email'];
 
     const result = await Plugins.FacebookLogin.login({ permissions: FACEBOOK_PERMISSIONS });
@@ -78,6 +84,7 @@ export class LoginPage implements OnInit {
   }
 
   async onLoginGoogle() {
+    this.classGoogle = 'circle-content active';
     try {
       const user = await this.authSvc.loginGoogle();
       if (user) {
