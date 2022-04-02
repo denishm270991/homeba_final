@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { Plugins } from '@capacitor/core';
 import { TranslateService } from '@ngx-translate/core';
-
+import { StorageService } from '../../services/storage.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -17,10 +17,10 @@ export class LoginPage implements OnInit {
   constructor(
     private router: Router,
     private authSvc: AuthService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private storage: StorageService
   ) {
-    this.language = 'en';
-    translate.setDefaultLang('en');
+    this.getLanguage();
     this.classFacebook = 'circle-content inactive';
     this.classGoogle = 'circle-content inactive';
   }
@@ -28,8 +28,23 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+  getLanguage() {
+    this.storage.getString('language').then((data: any) => {
+      if (data.value) {
+        this.language = data.value;
+        this.translate.setDefaultLang(this.language);
+      } else {
+        this.language = 'en';
+        this.storage.setString('language', this.language);        
+        this.translate.setDefaultLang(this.language);
+      }
+    });
+  }
+
   onSelectChange(selectedValue: any) {
-    this.translate.setDefaultLang(selectedValue.detail.value);
+    this.language = selectedValue.detail.value;
+    this.translate.setDefaultLang(this.language);
+    this.storage.setString('language', this.language);
   }
 
   ionViewWillEnter() {

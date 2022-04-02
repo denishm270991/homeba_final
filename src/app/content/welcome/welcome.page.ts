@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { Storage } from '@capacitor/storage';
+import { StorageService } from '../../services/storage.service';
+
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.page.html',
@@ -12,25 +13,36 @@ export class WelcomePage implements OnInit {
 
   constructor(
     private router: Router,
-    private translate: TranslateService
-  ) {
-    const checkName = async () => {
-      const { value } = await Storage.get({ key: 'language' });
-    
-      console.log(`Hello ${value}!`);
-    };
-    this.language = 'en';
-    translate.setDefaultLang('en');
+    private translate: TranslateService,
+    private storage: StorageService
+  ) {  
+    this.getLanguage();
   }
 
   ngOnInit() { }
+
+  getLanguage() {
+    this.storage.getString('language').then((data: any) => {
+      if (data.value) {
+        this.language = data.value;
+        this.translate.setDefaultLang(this.language);
+      } else {
+        this.language = 'en';
+        this.storage.setString('language', this.language);        
+        this.translate.setDefaultLang(this.language);
+      }
+    });
+  }
+
+  onSelectChange(selectedValue: any) {
+    this.language = selectedValue.detail.value;
+    this.translate.setDefaultLang(this.language);
+    this.storage.setString('language', this.language);
+  }
 
   showSignup() {
     console.log('yes');
     this.router.navigate(['/signup']);
   }
 
-  onSelectChange(selectedValue: any) {
-    this.translate.setDefaultLang(selectedValue.detail.value);
-  }
 }
