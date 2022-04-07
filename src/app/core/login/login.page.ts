@@ -35,7 +35,7 @@ export class LoginPage implements OnInit {
         this.translate.setDefaultLang(this.language);
       } else {
         this.language = 'en';
-        this.storage.setString('language', this.language);        
+        this.storage.setString('language', this.language);
         this.translate.setDefaultLang(this.language);
       }
     });
@@ -69,7 +69,7 @@ export class LoginPage implements OnInit {
     }
   }
 
-  async signIn(): Promise<void> {  
+  async signIn(): Promise<void> {
     this.classFacebook = 'circle-content active';
     const FACEBOOK_PERMISSIONS = ['public_profile', 'email'];
 
@@ -91,6 +91,7 @@ export class LoginPage implements OnInit {
       if (user) {
         const isVerified = this.authSvc.isEmailVerified(user);
         this.redirectUser(isVerified);
+        console.log(user);
       }
     }
     catch (error) {
@@ -105,6 +106,7 @@ export class LoginPage implements OnInit {
       if (user) {
         const isVerified = this.authSvc.isEmailVerified(user);
         this.redirectUser(isVerified);
+        console.log(user);
       }
     }
     catch (error) {
@@ -114,9 +116,9 @@ export class LoginPage implements OnInit {
 
   private redirectUser(isVerified: boolean) {
     if (isVerified) {
-      this.router.navigate(['mainscreen']);
+      this.router.navigate(['/mainscreen']);
     } else {
-      this.router.navigate(['verify-email']);
+      this.router.navigate(['/verify-email']);
     }
   }
 }

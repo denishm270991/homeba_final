@@ -43,8 +43,7 @@ const routes: Routes = [
   },
   {
     path: 'mainscreen',
-    loadChildren: () => import('./content/mainscreen/mainscreen.module').then( m => m.MainscreenPageModule),
-    canActivate: [AuthGuard],
+    loadChildren: () => import('./content/mainscreen/mainscreen.module').then( m => m.MainscreenPageModule)
   },
   {
     path: 'get-pre-approved',
