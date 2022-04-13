@@ -145,7 +145,7 @@ ion-content#login{
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
         &.active{
-            border: 2px solid #0D9EBA;
+            box-shadow: inset 0px 0px 10px rgba(90, 90, 90, 0.9);
         }
         img.icon-facebook{
             margin-left: 35%;

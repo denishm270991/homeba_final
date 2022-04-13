@@ -19,64 +19,88 @@
       </div>
       <div class="row content-form">
         <div class="col">
-          <h1 class="title-black signup">{{ 'SIGN_UP' | translate }}</h1>
+          <h1 class="text-bold signup">{{ 'SIGN_UP' | translate }}</h1>
         </div>
       </div>
-      <div class="row content-list">
-        <ion-list>
 
-          <ion-item class="ion-no-padding">
-            <div class="content-item">
-              <ion-label position="floating">{{ 'ENTER_FULL_NAME' | translate }}</ion-label>
-              <ion-input></ion-input>
-            </div>
-          </ion-item>
+      <form [formGroup]="form" novalidate>
 
-          <ion-item class="ion-no-padding">
-            <div class="content-item">
-              <ion-label position="floating">{{ 'ENTER_YOUR_MOBILE_NUMBER' | translate }}</ion-label>
-              <ion-input></ion-input>
-            </div>
-          </ion-item>
+        <div class="form-group floating">
+          <label for="full-name" [ngClass]="classLFN">{{ 'ENTER_FULL_NAME' | translate }}</label>
+          <input type="text" (click)="customClickFullName()" class="form-control my-custom" formControlName="fullName"
+            [ngClass]="{ 'is-invalid': submitted && f['fullName'].errors }" id="full-name" />
 
-          <ion-item class="ion-no-padding">
-            <div class="content-item">
-              <ion-label position="floating">{{ 'ENTER_EMAIL' | translate }}</ion-label>
-              <ion-input></ion-input>
-            </div>
-          </ion-item>
+        </div>
+        <div *ngIf="submitted && f['fullName'].errors.required" class="field-error">
+          inside
+          <!-- todo show error message in english or spanish -->
+        </div>
 
-          <ion-item class="ion-no-padding">
-            <div class="content-item">
-              <ion-label position="floating">{{ 'ENTER_PASSWORD' | translate }}</ion-label>
-              <ion-input></ion-input>
+        <div class="form-group floating">
+          <label for="mobile-number" [ngClass]="classLMN">{{ 'ENTER_YOUR_MOBILE_NUMBER' | translate }}</label>
+          <input type="text" (click)="customClickMovileNumber()" class="form-control my-custom"
+            formControlName="mobileNumber" [ngClass]="{ 'is-invalid': submitted && f['mobileNumber'].errors }"
+            id="mobile-number" placeholder="Please only numbers" />
+          <div *ngIf="submitted && f['mobileNumber'].errors" class="invalid-feedback">
+            <div *ngIf="f['mobileNumber'].errors.required"><strong>
+                {{ 'FORM_ERROR.REQUIRED' | translate }</strong>
             </div>
-          </ion-item>
+          </div>
+        </div>
 
-          <ion-item class="ion-no-padding">
-            <div class="content-item">
-              <ion-label position="floating">{{ 'REPEAT_PASSWORD' | translate }}</ion-label>
-              <ion-input></ion-input>
+        <div class="form-group floating">
+          <label for="email" [ngClass]="classLE">{{ 'ENTER_EMAIL' | translate }}</label>
+          <input type="text" (click)="customClickEmail()" class="form-control my-custom" formControlName="email"
+            [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" id="email" />
+          <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+            <div *ngIf="f['email'].errors.required"><strong>
+                {{ 'FORM_ERROR.REQUIRED' | translate }</strong>
             </div>
-          </ion-item>
-        </ion-list>
-      </div>
+            <div *ngIf="f['email'].errors.email"><strong>
+                {{ 'FORM_ERROR.EMAIL' | translate }</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group floating">
+          <label for="password" [ngClass]="classLP">{{ 'ENTER_PASSWORD' | translate }}</label>
+          <input type="text" (click)="customClickPassword()" class="form-control my-custom" formControlName="password"
+            [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" id="password" />
+          <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+            <div *ngIf="f['password'].errors.required"><strong>
+                {{ 'FORM_ERROR.REQUIRED' | translate }</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group floating">
+          <label for="repeat-password" [ngClass]="classLRP">{{ 'REPEAT_PASSWORD' | translate }}</label>
+          <input type="text" (click)="customClickRepeatPassword()" class="form-control my-custom"
+            formControlName="repeatPassword" [ngClass]="{ 'is-invalid': submitted && f['repeat-password'].errors }"
+            id="repeat-password" />
+          <div *ngIf="submitted && f['repeatPassword'].errors" class="invalid-feedback">
+            <div *ngIf="f['repeatPassword'].errors.required"><strong>
+                {{ 'FORM_ERROR.REQUIRED' | translate }</strong>
+            </div>
+          </div>
+        </div>
+      </form>
       <div class="row boton-signup">
-        <button type="button" class="my-color form-control">{{ 'SIGN_UP' | translate }}</button>
+        <button type="button" (click)="onSubmit()" class="my-color form-control">{{ 'SIGN_UP' | translate }}</button>
       </div>
-      <div class="line">
-        <span class="or">{{ 'OR' | translate }}</span>
-      </div>
-      <div class="socials-icons">
+      <!-- <div class="line"> -->
+      <!-- <span class="or">{{ 'OR' | translate }}</span>
+      </div> -->
+      <!-- <div class="socials-icons">
           <div class="circle-content">
             <img src="../../../assets/icon/FB-icon.png" class="icon-facebook" />
           </div>
           <div class="circle-content">
             <img src="../../../assets/icon/Google-icon.png" class="icon-google" />
           </div>
-      </div>
-      <div>
-        <p class="text-center">{{ 'ALREADY_ACOUNT' | translate }} 
+      </div> -->
+      <div class="already-account">
+        <p class="text-center">{{ 'ALREADY_ACOUNT' | translate }}
           <span class="title-black vinculo"><strong>{{ 'LOGIN' | translate }}</strong></span>
         </p>
       </div>

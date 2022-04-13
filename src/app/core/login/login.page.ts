@@ -21,6 +21,7 @@ export class LoginPage implements OnInit {
     private storage: StorageService
   ) {
     this.getLanguage();
+    this.isFirsTime();
     this.classFacebook = 'circle-content inactive';
     this.classGoogle = 'circle-content inactive';
   }
@@ -41,6 +42,14 @@ export class LoginPage implements OnInit {
     });
   }
 
+  isFirsTime() {
+    this.storage.getString('firstime').then((data: any) => {
+      if (data.value === 'false') {
+        this.storage.setString('firstime', 'true');
+        this.router.navigate(['/welcome']);
+      } 
+    });
+  }
   onSelectChange(selectedValue: any) {
     this.language = selectedValue.detail.value;
     this.translate.setDefaultLang(this.language);

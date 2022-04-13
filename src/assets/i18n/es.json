@@ -35,7 +35,8 @@
  
     "FORM_ERROR": {
         "REQUIRED": "Campo requerido",
-        "NUMBER": "Este campo es de solo números"
+        "NUMBER": "Este campo es de solo números",
+        "EMAIL": "Verifique el correo electrónico"
     },
     "WELCOME_": {
         "WELCOME": "¡Gracias por visitarnos! Estamos muy emocionados de escuchar que usted está interesado en comprar una casa.",

@@ -22,9 +22,7 @@ export class GetPreApprovedPage implements OnInit {
     private translate: TranslateService,
     private formBuilder: FormBuilder,
     private storage: StorageService
-  ) {
-    this.language = "en";
-    translate.setDefaultLang('en');
+  ) {   
     this.submitted1 = false;
     this.submitted2 = false;
     this.addPerson = false;

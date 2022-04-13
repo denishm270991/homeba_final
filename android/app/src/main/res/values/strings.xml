@@ -4,6 +4,4 @@
     <string name="title_activity_main">Home buyer assisstant</string>
     <string name="package_name">com.hba2</string>
     <string name="custom_url_scheme">com.hba2</string>
-  <string name="facebook_app_id">641147297176964</string>
-  <string name="fb_login_protocol_scheme">fb641147297176964</string>
 </resources>

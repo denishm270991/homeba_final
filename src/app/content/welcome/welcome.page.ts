@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { StorageService } from '../../services/storage.service';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 @Component({
   selector: 'app-welcome',
@@ -14,9 +15,16 @@ export class WelcomePage implements OnInit {
   constructor(
     private router: Router,
     private translate: TranslateService,
-    private storage: StorageService
-  ) {  
+    private storage: StorageService,
+    public composer: EmailComposer
+  ) {
     this.getLanguage();
+  }
+
+  openEmailCmposer() {
+    this.composer.open({
+      to: 'denishm270991@gmail.com'
+    })
   }
 
   ngOnInit() { }
@@ -28,7 +36,7 @@ export class WelcomePage implements OnInit {
         this.translate.setDefaultLang(this.language);
       } else {
         this.language = 'en';
-        this.storage.setString('language', this.language);        
+        this.storage.setString('language', this.language);
         this.translate.setDefaultLang(this.language);
       }
     });
@@ -41,8 +49,7 @@ export class WelcomePage implements OnInit {
   }
 
   showSignup() {
-    console.log('yes');
-    this.router.navigate(['/signup']);
+    this.router.navigate(['/register']);
   }
 
 }

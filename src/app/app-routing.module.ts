@@ -13,7 +13,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'register',
+    path: 'register2',
     loadChildren: () => import('./core/register/register.module').then(m => m.RegisterPageModule)
   },
   {
@@ -38,7 +38,7 @@ const routes: Routes = [
     loadChildren: () => import('./content/welcome/welcome.module').then(m => m.WelcomePageModule)
   },
   {
-    path: 'signup',
+    path: 'register',
     loadChildren: () => import('./content/signup/signup.module').then(m => m.SignupPageModule)
   },
   {
@@ -70,9 +70,6 @@ const routes: Routes = [
     path: 'close-your-new-home',
     loadChildren: () => import('./content/close-your-new-home/close-your-new-home.module').then( m => m.CloseYourNewHomePageModule)
   }
-
-
-
 
 ];
 

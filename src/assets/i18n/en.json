@@ -35,7 +35,8 @@
 
     "FORM_ERROR": {
         "REQUIRED": "This field is required",
-        "NUMBER": "This field must be only numbers"
+        "NUMBER": "This field must be only numbers",
+        "EMAIL": "Please check email"
     },
     "WELCOME_": {
         "WELCOME": "Hey, thanks for stopping by! We are thrilled to hear that you are interested in buying a home.",
