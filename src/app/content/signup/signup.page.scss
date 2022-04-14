@@ -87,7 +87,7 @@ ion-content#signup{
     form{
         background-color: rgb(245, 247, 249);
         width: 95%;
-        margin: auto;
+        margin: auto;        
     }  
     .form-group.floating{
         position: relative;
@@ -96,7 +96,7 @@ ion-content#signup{
         label{
             position: absolute;
             &.normal{
-                top: 7px; 
+                top: 5px; 
                 color: black;
                 transition: all 0.2s;
                 -webkit-transition: all 0.2s;
@@ -136,8 +136,7 @@ ion-content#signup{
             -moz-border-radius: 0;
             -ms-border-radius: 0;
             -o-border-radius: 0;
-        }
-
+        }        
     }
 }
 // .line {

@@ -61,12 +61,12 @@
     </div>
     <div class="row">
       <div class="col">
-        <img src="../../../assets/img/signup/003_with_logo.png" class="icon-logo"/>
+        <img src="../../../assets/img/signup/003_with_logo.png" class="icon-logo" />
       </div>
     </div>
     <div class="row content-body-dark">
       <div class="content-icon">
-        <img src="../../../assets/icon/Profile icon.png" class="icon-profile"/>
+        <img src="../../../assets/icon/Profile icon.png" class="icon-profile" />
       </div>
       <div class="row content-form">
         <div class="col">
@@ -76,8 +76,8 @@
 
       <div class="row content-list">
 
-          <ion-list>
-            <form>
+        <ion-list>
+          <form>
             <ion-item class="ion-no-padding">
               <div class="content-item">
                 <ion-label position="floating">{{ 'ENTER_EMAIL' | translate }}</ion-label>
@@ -91,33 +91,33 @@
                 <ion-input type="password" #password></ion-input>
               </div>
             </ion-item>
-        </form>
-        <p>
-          <a routerLink="/forgot-password" class="vincle-no-style a-forgot-password">
-            {{ 'FORGOT_PASSWORD' | translate }}</a>
-        </p>
+          </form>
+          <p>
+            <a routerLink="/forgot-password" class="vincle-no-style a-forgot-password">
+              {{ 'FORGOT_PASSWORD' | translate }}</a>
+          </p>
         </ion-list>
       </div>
       <div class="row boton-signup">
         <button type="button" class="my-color form-control" (click)="onLogin(email, password)">{{ 'LOGIN' | translate
           }}</button>
       </div>
-      <div class="content-line">
+      <!-- <div class="content-line">
         <span class="or">{{ 'OR' | translate }}</span>
         <div class="line"></div>
-      </div>
+      </div> -->
 
-      <div class="socials-icons">
+      <!-- <div class="socials-icons">
         <div [class]="classFacebook">
           <img src="../../../assets/icon/FB-icon.png" (click)="signIn()" class="icon-facebook"/>
         </div>
         <div [class]="classGoogle">
           <img src="../../../assets/icon/Google-icon.png" (click)="onLoginGoogle()" class="icon-google"/>
         </div>
-      </div>
-      <div class="last-text">
-        <p class="text-center last-p">{{ 'ALREADY_ACOUNT' | translate }}
-          <a routerLink="/register" class="text-bold vincle-no-style">{{ 'SIGN_UP' | translate }}</a>
+      </div> -->
+      <div class="last-text mt-1">
+        <p class="text-center last-p">{{ 'NOT_ALREADY_ACOUNT' | translate }}
+          <a routerLink="/register" class="text-bold vincle-no-style">{{ 'REGISTER' | translate }}</a>
         </p>
       </div>
     </div>

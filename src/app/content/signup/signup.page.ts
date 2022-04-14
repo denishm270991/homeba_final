@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class SignupPage implements OnInit {
   language: string;
+  isSpanish: boolean;
   // classFacebook: string;
   // classGoogle: string;
   form: FormGroup;
@@ -25,22 +26,50 @@ export class SignupPage implements OnInit {
       fullName: ['', [Validators.required]],
       mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
+      password: ['', [Validators.required, Validators.minLength(2)]],
       repeatPassword: ['', [Validators.required]],
+    }, {
+      validator: this.confirmedPasswordValidator('password', 'repeatPassword')
     });
+  }
+
+  // this function validate that password and repeat password match
+  confirmedPasswordValidator(controlName: string, matchingControlName: string) {
+    return (formGroup: FormGroup) => {
+      const control = formGroup.controls[controlName];
+      const matchingControl = formGroup.controls[matchingControlName];
+      if (matchingControl.errors && !matchingControl.errors.confirmedValidator) {
+        return;
+      }
+      if (control.value !== matchingControl.value) {
+        matchingControl.setErrors({ confirmedValidator: true });
+      } else {
+        matchingControl.setErrors(null);
+      }
+    }
   }
 
   get f() { return this.form.controls }
 
-  onSubmit() {
+  register() {
     this.submitted = true;
     console.log(this.f);
     if (this.form.invalid) {
       return;
     }
-    
-    // todo procesar los datos del formulario
+    // todo to proccess the data of form
+    var values = this.form.value;
+    console.log(values);
+    var user = {
+      fullName: values.fullName,
+      mobileNumber: values.mobileNumber,
+      email: values.email,
+      password: values.password,
+      emailVerified: false
+    }
+
   }
+
 
   ngOnInit() { }
 
@@ -49,8 +78,10 @@ export class SignupPage implements OnInit {
       if (data.value) {
         this.language = data.value;
         this.translate.setDefaultLang(this.language);
+        this.isSpanish = this.language === 'en' ? false : true;
       } else {
         this.language = 'en';
+        this.isSpanish = this.language === 'en' ? false : true;
         this.storage.setString('language', this.language);
         this.translate.setDefaultLang(this.language);
       }
@@ -61,6 +92,7 @@ export class SignupPage implements OnInit {
     this.language = selectedValue.detail.value;
     this.translate.setDefaultLang(this.language);
     this.storage.setString('language', this.language);
+    this.isSpanish = this.language === 'en' ? false : true;
   }
 
   classLFN: string = 'normal';

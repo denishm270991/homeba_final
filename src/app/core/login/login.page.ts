@@ -20,8 +20,8 @@ export class LoginPage implements OnInit {
     private translate: TranslateService,
     private storage: StorageService
   ) {
-    this.getLanguage();
     this.isFirsTime();
+    this.getLanguage();    
     this.classFacebook = 'circle-content inactive';
     this.classGoogle = 'circle-content inactive';
   }
@@ -44,7 +44,8 @@ export class LoginPage implements OnInit {
 
   isFirsTime() {
     this.storage.getString('firstime').then((data: any) => {
-      if (data.value === 'false') {
+      console.log('data.value', data);
+      if (!data.value) {
         this.storage.setString('firstime', 'true');
         this.router.navigate(['/welcome']);
       } 
