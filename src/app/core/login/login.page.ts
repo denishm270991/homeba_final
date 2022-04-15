@@ -124,24 +124,18 @@ export class LoginPage implements OnInit {
 
   private redirectUser(isVerified: boolean, user: User) {
     if (isVerified) {
-      this.storage.getString('hbaUid').then((data: any) => {
-        if (data.value) {
-          this.storage.getString('hbaUid').then((res => {
-            if (res.value) {
-              this.storage.getObject('hbaUser').then((dataUser: any) => {
-                let userData = JSON.parse(dataUser);
-                const data: UserI = {
-                  uid: res.value,
-                  email: userData.email,
-                  fullName: userData.fullName,
-                  mobileNumber: userData.mobileNumber
-                };
-                this.auth2Service.addUser(data);
-                this.router.navigate(['/mainscreen']);
-              });
-            }
-          }));
-
+      this.storage.getString('hbaUid').then((res: any) => {
+        if (res.value) {
+          this.storage.getObject('hbaUser').then((dataUser: any) => {            
+            const data: UserI = {
+              uid: res.value,
+              email: dataUser.email,
+              fullName: dataUser.fullName,
+              mobileNumber: dataUser.mobileNumber
+            };
+            this.auth2Service.addUser(data);
+            this.router.navigate(['/mainscreen']);
+          });
         }
       });
     } else {
