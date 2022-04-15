@@ -1,6 +1,7 @@
 import { AuthService } from './../../services/auth.service';
 import { Observable } from 'rxjs';
 import { Component, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/shared/user.interface';
 import { TranslateService } from '@ngx-translate/core';
 import { StorageService } from '../../services/storage.service';
@@ -16,7 +17,8 @@ export class VerifyEmailPage implements OnDestroy {
   constructor(
     private authSvc: AuthService,
     private translate: TranslateService,
-    private storage: StorageService
+    private storage: StorageService,
+    private router: Router,
   ) {
     this.getLanguage();
   }
@@ -47,6 +49,10 @@ export class VerifyEmailPage implements OnDestroy {
     catch (error) {
       console.log('Error----->', error);
     }
+  }
+
+  navigateToLogin(){
+    this.router.navigate(['login']);
   }
 
   ngOnDestroy(): void {

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { StorageService } from '../../services/storage.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Auth2Service } from 'src/app/services/auth2.service';
+import { Router } from '@angular/router';
+import { UserI } from '../../interfaces/user';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.page.html',
@@ -19,6 +22,8 @@ export class SignupPage implements OnInit {
     private translate: TranslateService,
     private storage: StorageService,
     private formBuilder: FormBuilder,
+    private auth2Service: Auth2Service,
+    private router: Router,
   ) {
     this.getLanguage();
     this.submitted = false;
@@ -53,23 +58,59 @@ export class SignupPage implements OnInit {
 
   register() {
     this.submitted = true;
-    console.log(this.f);
     if (this.form.invalid) {
       return;
     }
     // todo to proccess the data of form
     var values = this.form.value;
-    console.log(values);
-    var user = {
-      fullName: values.fullName,
-      mobileNumber: values.mobileNumber,
-      email: values.email,
-      password: values.password,
-      emailVerified: false
-    }
 
+    this.onRegister(values.email, values.password, values);
   }
 
+  currentUser: any;
+  async onRegister(email: string, password: string, values: any) {
+    try {
+      const user = await this.auth2Service.register(email, password);
+      if (user) {
+        const isVerified = this.auth2Service.isEmailVerified(user);
+        var data = {
+          fullName: values.fullName,
+          mobileNumber: values.mobileNumber,
+          email: values.email
+        }
+        this.saveUser(user.uid, data);
+        this.redirectUser(isVerified);
+      }
+    }
+    catch (error) {
+      console.log('Error-->', error);
+    }
+  }
+
+  saveUser(uid: string, values) {
+    this.storage.getString('hbaUid').then((data: any) => {
+      if (!data.value) {
+        this.storage.setString('hbaUid', uid);
+      } else {
+        this.storage.setObject('hbaUid', uid);
+      }
+    });
+    this.storage.getString('hbaUser').then((data: any) => {
+      if (!data.value) {
+        this.storage.setString('hbaUser', JSON.stringify(values));
+      } else {
+        this.storage.setObject('hbaUser', JSON.stringify(values));
+      }
+    }); 
+  }
+
+  private redirectUser(isVerified: boolean) {
+    if (isVerified) {
+      this.router.navigate(['mainscreen']);
+    } else {
+      this.router.navigate(['verify-email']);
+    }
+  }
 
   ngOnInit() { }
 
