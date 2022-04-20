@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { User } from 'src/app/shared/user.interface';
 import { TranslateService } from '@ngx-translate/core';
 import { StorageService } from '../../services/storage.service';
+import { ToastService } from 'src/app/services/toast.service';
 @Component({
   selector: 'app-verify-email',
   templateUrl: './verify-email.page.html',
@@ -19,6 +20,7 @@ export class VerifyEmailPage implements OnDestroy {
     private translate: TranslateService,
     private storage: StorageService,
     private router: Router,
+    private toastService: ToastService,
   ) {
     this.getLanguage();
   }
@@ -47,7 +49,11 @@ export class VerifyEmailPage implements OnDestroy {
       await this.authSvc.sendVerificationEmail();
     }
     catch (error) {
-      console.log('Error----->', error);
+      if (this.language === 'en') {
+        this.toastService.displayToastError('RESPONSE', 'Oops, something happened, please check your internet connection or try again later.', 'Close');
+      } else {
+        this.toastService.displayToastError('RESPUESTA', 'Oops, algo ha ocurrido, compruebe su conexión a internet o inténtelo más tarde.', 'Cerrar');
+      }
     }
   }
 

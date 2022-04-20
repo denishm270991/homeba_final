@@ -53,17 +53,11 @@
           {{ 'PRE_APPROVED_RESULT.MESSAGE_LETTER' | translate }}
         </div>
       </div>
-      <br />
-      <div class="row mb-2">
-        <div class="col">
-          <button type="button" class="my-color form-control">
-            {{ 'VERIFY_INFORMATION' | translate }}</button>
-        </div>
-      </div>
+      <br />      
       <div class="row">
         <div class="col">
-          <button type="button" class="bg-gray form-control mb-3">
-            {{ 'BACK_TO_MAIN_SCREEN' | translate }}</button>
+          <a routerLink="/mainscreen" class="btn my-color form-control" role="button">
+            {{ 'MAIN_SCREEN_' | translate }}</a>
         </div>
       </div>
     </div>

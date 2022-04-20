@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { StorageService } from '../../services/storage.service';
-import { EmailComposer } from '@ionic-native/email-composer/ngx';
-
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.page.html',
@@ -16,16 +14,13 @@ export class WelcomePage implements OnInit {
     private router: Router,
     private translate: TranslateService,
     private storage: StorageService,
-    public composer: EmailComposer
   ) {
     this.getLanguage();
   }
 
-  openEmailCmposer() {
-    this.composer.open({
-      to: 'denishm270991@gmail.com'
-    })
-  }
+  // requestCallBack() {
+  //   this.mailService.send({});
+  // }
 
   ngOnInit() { }
 

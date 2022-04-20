@@ -31,10 +31,14 @@ ion-content#welcome{
            position: absolute; 
        }
     }
+    .text-body-welcome p{
+        width: 95%;
+    }
 }
-.no-scroll{
-    overflow: hidden;
-}
+
+// .no-scroll{
+//     overflow: hidden;
+// }
 
 #welcome{   
     .row-welcome{

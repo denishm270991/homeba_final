@@ -14,6 +14,7 @@
     "NOT_ALREADY_ACOUNT": "No tienes una cuenta?",
     "LOGIN": "Entrar",
     "REQUEST_CALL_BACK": "Pida una llamada",
+    "REQUEST_CALLING": "Enviando solicitud",
     "CLICK_TO_CHAT": "Click para Chatear",
     "ZIP_CODE": "Código postal",
     "ZIP_CODE_DESCRIPTION": "Código postal (se necesita en caso de que necesitemos conectarlo con un Asistente cerca de usted)",
@@ -34,6 +35,7 @@
     "REQUEST_PASSWORD_RESET": "Petición para Recuperación de Contraseña",
     "FORGOT_PASSWORD": "Has olvidado tu contraseña",
     "EMAIL": "Correo Electrónico",
+    "RESENT_VERIFICATION_EMAIL": "Reenviar correo",
  
     "FORM_ERROR": {
         "REQUIRED": "Campo requerido",
@@ -115,5 +117,11 @@
     "CLOSE_YOUR_HOME": {
         "TITLE": "Cerrar en su nuevo hogar",
         "TEXT_1": "Antes del día de cierre, debe tomarse el tiempo para hacer un último recorrido en su nuevo hogar. Verifique todo una vez más y asegúrese de que el vendedor haya realizado las reparaciones que solicitó y haya desalojado la propiedad. Si todo se ve bien, puede seguir adelante con confianza. Y después de que termine el cierre, ¡usted es oficialmente propietario de una casa!"
+    },
+    "VERIFY_PASSWORD":{
+        "HEADER": "Coreo de Verificación",
+        "TITLE": "Gracias por registrarte!",
+        "TEXT_CONFIRM_EMAIL": "Hemos enviado un correo de confirmación a ",
+        "PLEASE_CHECK_EMAIL": "Por favor verifique su email y acceda al vínculo para verificar su dirección de correo."
     }
 }

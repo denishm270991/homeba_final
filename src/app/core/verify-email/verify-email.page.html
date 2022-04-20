@@ -1,25 +1,29 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Email Verification</ion-title>
+    <ion-title>{{ 'VERIFY_PASSWORD.HEADER' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content *ngIf="user$ | async as user">
   <ion-row>
     <ion-col>
-      <H2>Thank you for Registering!</H2>
-      <p>We have sent a confirmation email to <strong>{{user.email}}</strong></p>
-      <p>Please check your email and click on the link to verify you email address.</p>
+      <H2>{{ 'VERIFY_PASSWORD.TITLE' | translate }}</H2>
+      <p>{{ 'VERIFY_PASSWORD.TEXT_CONFIRM_EMAIL' | translate }} <strong>{{user.email}}</strong></p>
+      <p>{{ 'VERIFY_PASSWORD.PLEASE_CHECK_EMAIL' | translate }}</p>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-      <ion-button type="submit" color="primary" expand="block" (click)="onSendEmail()">Resend verification email</ion-button>
+      <ion-button type="submit" color="primary" expand="block" (click)="onSendEmail()">
+        {{ 'RESENT_VERIFICATION_EMAIL' | translate }}
+      </ion-button>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-      <ion-button type="button" color="primary" expand="block" (click)="navigateToLogin()">Login</ion-button>
+      <ion-button type="button" color="primary" expand="block" (click)="navigateToLogin()">
+        {{ 'LOGIN' | translate }}
+      </ion-button>
     </ion-col>
   </ion-row>
 </ion-content>

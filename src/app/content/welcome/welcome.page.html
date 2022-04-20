@@ -1,4 +1,4 @@
-<ion-content id="welcome" class="bg-welcome no-scroll">
+<ion-content id="welcome" class="bg-welcome">
   <img src='../../../assets/img/welcome/welcome_right.svg' alt="Image with lines" class="right">
   <img src='../../../assets/img/welcome/welcome_left.svg' alt="Image with lines" class="left">
   <ion-grid>
@@ -16,7 +16,7 @@
     <div class="simulate-canvas">
       <img src='../../../assets/img/welcome/canvas.png' alt="Image Canvas" class="canvas">
       <ion-row class="row-welcome">
-        <ion-col size="12">
+        <ion-col size="12" class="text-body-welcome">
           <h1 class="title1 title-welcome">{{ 'WELCOME' | translate }}</h1>
           <p class="text-center text-p">{{ 'WELCOME_.WELCOME' | translate }}</p>
           <p class="text-center text-p">{{ 'WELCOME_.ABOUT_WE' | translate }}</p>
@@ -26,14 +26,11 @@
           <button type="button" (click)="showSignup()" class="my-color form-control button-start">{{ 'START' |
             translate }}</button>
         </ion-col>
-        <ion-col size="12">
-          <p class="text-center" (click)="openEmailCmposer()">{{ 'WELCOME_.CALL' | translate }}
-            <a href="#" class="need-introduction">{{ 'CLICK_HERE' | translate }}</a>
+        <!-- <ion-col size="12">
+          <p class="text-center">{{ 'WELCOME_.CALL' | translate }}
+            <span (click)="requestCallBack()" class="need-introduction">{{ 'CLICK_HERE' | translate }}</span>
           </p>
-          <a href="mailto:denishm270991@gmail.com?subject=This is the subject&cc=denishm@gmail.com&body=This is the body">
-            Send feedback
-        </a>
-        </ion-col>
+        </ion-col> -->
       </ion-row>
     </div>      
   </ion-grid>

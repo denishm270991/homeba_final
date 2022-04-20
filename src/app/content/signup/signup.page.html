@@ -46,7 +46,6 @@
         </span>
 
         <!-- mobile number -->
-        <br />
         <ion-item color="transparent" lines="full">
           <ion-label position="floating">{{ 'ENTER_YOUR_MOBILE_NUMBER' | translate }}</ion-label>
           <ion-input formControlName="mobileNumber" type="text"></ion-input>
@@ -62,10 +61,10 @@
 
         <span class="error ion-padding"
           *ngIf="f.mobileNumber.touched && !submitted && f.mobileNumber.errors?.pattern && !isSpanish">
-          Verify your mobile number
+          Please, enter 10 digits 
         </span>
         <span class="error ion-padding" *ngIf="submitted && f.mobileNumber.errors?.pattern && !isSpanish">
-          Verify your mobile number
+          Please, enter 10 digits
         </span>
 
         <span class="error ion-padding"
@@ -78,14 +77,13 @@
 
         <span class="error ion-padding"
           *ngIf="f.mobileNumber.touched && !submitted && f.mobileNumber.errors?.pattern && isSpanish">
-          Verifique su número de teléfono
+          Por favor, introduzca 10 dígitos
         </span>
         <span class="error ion-padding" *ngIf="submitted && f.mobileNumber.errors?.pattern && isSpanish">
-          Verifique su número de teléfono
+          Por favor, introduzca 10 dígitos
         </span>
 
         <!-- email -->
-        <br />
         <ion-item color="transparent" lines="full">
           <ion-label position="floating">{{ 'ENTER_EMAIL' | translate }}</ion-label>
           <ion-input formControlName="email" type="text"></ion-input>
@@ -119,10 +117,17 @@
         </span>
 
         <!-- password -->
-        <br />
         <ion-item color="transparent" lines="full">
           <ion-label position="floating">{{ 'ENTER_PASSWORD' | translate }}</ion-label>
-          <ion-input formControlName="password" type="password"></ion-input>
+
+          <ion-row style="width: 100%;">
+            <ion-col size="10">
+              <ion-input formControlName="password" [type]="passwordType" #password></ion-input>
+            </ion-col>
+            <ion-col size="2">
+              <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+            </ion-col>
+          </ion-row>
         </ion-item>
 
         <span class="error ion-padding"
@@ -135,10 +140,10 @@
 
         <span class="error ion-padding"
           *ngIf="f.password.touched && !submitted && f.password.errors?.minlength && !isSpanish">
-          Password must be more than 2 characters
+          Password must be more than 6 characters
         </span>
         <span class="error ion-padding" *ngIf="submitted && f.password.errors?.minlength && !isSpanish">
-          la contraseña debe tener más de 2 caracteres
+          la contraseña debe tener más de 6 caracteres
         </span>
 
         <span class="error ion-padding"
@@ -150,10 +155,17 @@
         </span>
 
         <!-- repeat password -->
-        <br />
         <ion-item color="transparent" lines="full">
           <ion-label position="floating">{{ 'REPEAT_PASSWORD' | translate }}</ion-label>
-          <ion-input formControlName="repeatPassword" type="password"></ion-input>
+          
+          <ion-row style="width: 100%;">
+            <ion-col size="10">
+              <ion-input formControlName="repeatPassword" [type]="passwordType2" #password></ion-input>
+            </ion-col>
+            <ion-col size="2">
+              <ion-icon item-end [name]="passwordIcon2" class="passwordIcon" (click)='hideShowPassword2()'></ion-icon>
+            </ion-col>
+          </ion-row>
         </ion-item>
 
         <span class="error ion-padding"
@@ -188,7 +200,6 @@
           The passwords not match
         </span>
 
-        <br />
         <br />
         <div class="row boton-signup">
           <button type="submit" class="my-color form-control">{{ 'SIGN_UP' | translate }}</button>

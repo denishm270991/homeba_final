@@ -14,6 +14,7 @@
     "NOT_ALREADY_ACOUNT": "Have not an account?",
     "LOGIN": "Login",
     "REQUEST_CALL_BACK": "Request a call Back",
+    "REQUEST_CALLING": "Sending request",
     "CLICK_TO_CHAT": "Click to Chat",
     "ZIP_CODE": "Zip Code",
     "ZIP_CODE_DESCRIPTION": "Zip Code (It is needed just in case that we need to connect you with an Assistant near you)",
@@ -34,6 +35,7 @@
     "REQUEST_PASSWORD_RESET": "Request Password Reset",
     "FORGOT_PASSWORD": "Forgot Password",
     "EMAIL": "Email",
+    "RESENT_VERIFICATION_EMAIL": "Resend email",
 
     "FORM_ERROR": {
         "REQUIRED": "This field is required",
@@ -115,5 +117,11 @@
     "CLOSE_YOUR_HOME": {
         "TITLE": "Close On Your New Home",
         "TEXT_1": "Before the closing day you should take the time to do one last walkthrough alone in your new home. Check everything one more time and make sure that the seller has made the repairs you requested and cleared out the property. If everything looks good, you can confidently move ahead. And after closing finishes, you’re officially a homeowner!"
+    },
+    "VERIFY_PASSWORD":{
+        "HEADER": "Email Verification",
+        "TITLE": "Thank you for Registering!",
+        "TEXT_CONFIRM_EMAIL": "We have sent a confirmation email to",
+        "PLEASE_CHECK_EMAIL": "Please check your email and click on the link to verify you email address."
     }
 }

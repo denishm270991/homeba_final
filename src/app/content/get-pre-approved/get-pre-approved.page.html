@@ -68,16 +68,7 @@
       <div class="col">
         <p class="text-center title-fill-info">{{ 'PRE_APPROVED.FILL_SURVEY_FORM' | translate }}</p>
         <br />
-        <form [formGroup]="form2" novalidate>
-          <div class="form-group">
-            <label for="zip-code2">{{ 'ZIP_CODE_DESCRIPTION' | translate }}</label>
-            <input type="number" class="form-control" formControlName="zipCode2"
-              [ngClass]="{ 'is-invalid': submitted2 && f2['zipCode2'].errors }" id="zip-code2" />
-            <div *ngIf="submitted2 && f2['zipCode2'].errors" class="invalid-feedback">
-              <div *ngIf="f2['zipCode2'].errors.required"><strong>{{ 'FORM_ERROR.REQUIRED' | translate }}</strong></div>
-              <div *ngIf="f2['zipCode2'].errors.pattern"><strong>{{ 'FORM_ERROR.NUMBER' | translate }}</strong></div>
-            </div>
-          </div>
+        <form [formGroup]="form2" novalidate>         
           <div class="form-group">
             <label for="credit-score2">{{ 'CREDIT_SCORE_DESCRIPTION' | translate }}</label>
             <input type="number" class="form-control" formControlName="creditScore2"

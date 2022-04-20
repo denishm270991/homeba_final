@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { StorageService } from '../../services/storage.service';
+import { MailService } from '../../services/mail.service';
 @Component({
   selector: 'app-get-pre-approved',
   templateUrl: './get-pre-approved.page.html',
@@ -21,8 +22,9 @@ export class GetPreApprovedPage implements OnInit {
     private router: Router,
     private translate: TranslateService,
     private formBuilder: FormBuilder,
-    private storage: StorageService
-  ) {   
+    private storage: StorageService,
+    private mailService: MailService,
+  ) {
     this.submitted1 = false;
     this.submitted2 = false;
     this.addPerson = false;
@@ -34,7 +36,6 @@ export class GetPreApprovedPage implements OnInit {
       monthlyDebts: ['', [Validators.required, Validators.pattern('^[0-9]+$')]]
     });
     this.form2 = this.formBuilder.group({
-      zipCode2: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       creditScore2: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       monthlyIncome2: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       monthlyDebts2: ['', [Validators.required, Validators.pattern('^[0-9]+$')]]
@@ -77,6 +78,8 @@ export class GetPreApprovedPage implements OnInit {
     if (this.form1.invalid) {
       return;
     }
+
+
     if (this.addPerson) {
       if (this.form2.invalid) {
         return;
@@ -89,27 +92,46 @@ export class GetPreApprovedPage implements OnInit {
     let monthlyDebts = this.f1.monthlyDebts.value;
 
     let result: boolean = false;
+    let form = {
+      approved: 'notapproved',
+      zipCode: zipCode,
+      creditScore: creditScore,
+      monthlyIncome: monthlyIncome,
+      monthlyDebts: monthlyDebts,
+      zipCode2: 0,
+      creditScore2: 0,
+      monthlyIncome2: 0,
+      monthlyDebts2: 0
+    }
 
     if (!this.addPerson) {
       if (creditScore > 579) {
         if ((monthlyDebts / monthlyIncome) < 0.47) {
-          result = true;
+          result = true; 
+          form.approved = 'approved';         
         }
       }
     } else {
-      let zipCode2 = this.f2.zipCode2.value;
+      let zipCode2 = zipCode;
       let creditScore2 = this.f2.creditScore2.value;
       let monthlyIncome2 = this.f2.monthlyIncome2.value;
       let monthlyDebts2 = this.f2.monthlyDebts2.value;
+
+      form.zipCode2 = zipCode2;
+      form.creditScore2 = creditScore2;
+      form.monthlyIncome2 = monthlyIncome2;
+      form.monthlyDebts2 = monthlyDebts2;
 
       if (creditScore > 579 && creditScore2 > 579) {
         let sumIncome = monthlyIncome + monthlyIncome2;
         let sumDebts = monthlyDebts + monthlyDebts2;
         if ((sumDebts / sumIncome) < 0.47) {
           result = true;
+          form.approved = 'approved';
         }
       }
     }
+    this.mailService.send(form);
     this.router.navigate(['/pre-approved-result', result]);
   }
 

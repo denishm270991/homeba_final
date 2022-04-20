@@ -29,9 +29,9 @@ export class SignupPage implements OnInit {
     this.submitted = false;
     this.form = this.formBuilder.group({
       fullName: ['', [Validators.required]],
-      mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
+      mobileNumber: ['', [Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')]],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(2)]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
       repeatPassword: ['', [Validators.required]],
     }, {
       validator: this.confirmedPasswordValidator('password', 'repeatPassword')
@@ -87,21 +87,24 @@ export class SignupPage implements OnInit {
     }
   }
 
-  saveUser(uid: string, values) {
-    this.storage.getString('hbaUid').then((data: any) => {
-      if (!data.value) {
-        this.storage.setString('hbaUid', uid);
-      } else {
-        this.storage.setObject('hbaUid', uid);
-      }
-    });
-    this.storage.getString('hbaUser').then((data: any) => {
-      if (!data.value) {
-        this.storage.setString('hbaUser', JSON.stringify(values));
-      } else {
-        this.storage.setObject('hbaUser', JSON.stringify(values));
-      }
-    }); 
+  saveUser(uid: string, values: any) {   
+    this.storage.setObject('hbaUid', uid);
+    this.storage.setObject('hbaUser', JSON.stringify(values));
+    
+    // this.storage.getString('hbaUid').then((data: any) => {
+    //   if (!data.value) {
+    //     this.storage.setString('hbaUid', uid);
+    //   } else {
+    //     this.storage.setObject('hbaUid', uid);
+    //   }
+    // });
+    // this.storage.getString('hbaUser').then((data: any) => {
+    //   if (!data.value) {
+    //     this.storage.setObject('hbaUser', JSON.stringify(values));
+    //   } else {
+    //     this.storage.setObject('hbaUser', JSON.stringify(values));
+    //   }
+    // }); 
   }
 
   private redirectUser(isVerified: boolean) {
@@ -119,13 +122,12 @@ export class SignupPage implements OnInit {
       if (data.value) {
         this.language = data.value;
         this.translate.setDefaultLang(this.language);
-        this.isSpanish = this.language === 'en' ? false : true;
       } else {
-        this.language = 'en';
-        this.isSpanish = this.language === 'en' ? false : true;
+        this.language = 'en';        
         this.storage.setString('language', this.language);
         this.translate.setDefaultLang(this.language);
       }
+      this.isSpanish = this.language === 'en' ? false : true;
     });
   }
 
@@ -136,89 +138,102 @@ export class SignupPage implements OnInit {
     this.isSpanish = this.language === 'en' ? false : true;
   }
 
-  classLFN: string = 'normal';
-  classLMN: string = 'normal';
-  classLE: string = 'normal';
-  classLP: string = 'normal';
-  classLRP: string = 'normal';
-
-  customClickFullName() {
-    this.classLFN = 'normal-clicked-data';
-    this.updateStyleMovileNumber();
-    this.updateStyleEmail();
-    this.updateStylePassword();
-    this.updateStyleRepeatPassword();
+  passwordType: string = 'password';
+  passwordIcon: string = 'eye-off';
+  hideShowPassword() {
+    this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
+    this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
+  }
+  passwordType2: string = 'password';
+  passwordIcon2: string = 'eye-off';
+  hideShowPassword2() {
+    this.passwordType2 = this.passwordType2 === 'text' ? 'password' : 'text';
+    this.passwordIcon2 = this.passwordIcon2 === 'eye-off' ? 'eye' : 'eye-off';
   }
 
-  customClickMovileNumber() {
-    this.classLMN = 'normal-clicked-data';
-    this.updateStyleFullName();
-    this.updateStyleEmail();
-    this.updateStylePassword();
-    this.updateStyleRepeatPassword();
-  }
+  // classLFN: string = 'normal';
+  // classLMN: string = 'normal';
+  // classLE: string = 'normal';
+  // classLP: string = 'normal';
+  // classLRP: string = 'normal';
 
-  customClickEmail() {
-    this.classLE = 'normal-clicked-data';
-    this.updateStyleFullName();
-    this.updateStyleMovileNumber();
-    this.updateStylePassword();
-    this.updateStyleRepeatPassword();
-  }
+  // customClickFullName() {
+  //   this.classLFN = 'normal-clicked-data';
+  //   this.updateStyleMovileNumber();
+  //   this.updateStyleEmail();
+  //   this.updateStylePassword();
+  //   this.updateStyleRepeatPassword();
+  // }
 
-  customClickPassword() {
-    this.classLP = 'normal-clicked-data';
-    this.updateStyleFullName();
-    this.updateStyleMovileNumber();
-    this.updateStyleEmail();
-    this.updateStyleRepeatPassword();
-  }
+  // customClickMovileNumber() {
+  //   this.classLMN = 'normal-clicked-data';
+  //   this.updateStyleFullName();
+  //   this.updateStyleEmail();
+  //   this.updateStylePassword();
+  //   this.updateStyleRepeatPassword();
+  // }
 
-  customClickRepeatPassword() {
-    this.classLRP = 'normal-clicked-data';
-    this.updateStyleFullName();
-    this.updateStyleMovileNumber();
-    this.updateStyleEmail();
-    this.updateStylePassword();
-  }
+  // customClickEmail() {
+  //   this.classLE = 'normal-clicked-data';
+  //   this.updateStyleFullName();
+  //   this.updateStyleMovileNumber();
+  //   this.updateStylePassword();
+  //   this.updateStyleRepeatPassword();
+  // }
 
-  updateStyleFullName() {
-    if (this.form.controls['fullName'].value === "") {
-      this.classLFN = 'normal';
-    } else {
-      this.classLFN = 'normal-clicked-no-data';
-    }
-  }
+  // customClickPassword() {
+  //   this.classLP = 'normal-clicked-data';
+  //   this.updateStyleFullName();
+  //   this.updateStyleMovileNumber();
+  //   this.updateStyleEmail();
+  //   this.updateStyleRepeatPassword();
+  // }
 
-  updateStyleEmail() {
-    if (this.form.controls['email'].value === "") {
-      this.classLE = 'normal';
-    } else {
-      this.classLE = 'normal-clicked-no-data';
-    }
-  }
+  // customClickRepeatPassword() {
+  //   this.classLRP = 'normal-clicked-data';
+  //   this.updateStyleFullName();
+  //   this.updateStyleMovileNumber();
+  //   this.updateStyleEmail();
+  //   this.updateStylePassword();
+  // }
 
-  updateStyleMovileNumber() {
-    if (this.form.controls['mobileNumber'].value === "") {
-      this.classLMN = 'normal';
-    } else {
-      this.classLMN = 'normal-clicked-no-data';
-    }
-  }
+  // updateStyleFullName() {
+  //   if (this.form.controls['fullName'].value === "") {
+  //     this.classLFN = 'normal';
+  //   } else {
+  //     this.classLFN = 'normal-clicked-no-data';
+  //   }
+  // }
 
-  updateStylePassword() {
-    if (this.form.controls['password'].value === "") {
-      this.classLP = 'normal';
-    } else {
-      this.classLP = 'normal-clicked-no-data';
-    }
-  }
+  // updateStyleEmail() {
+  //   if (this.form.controls['email'].value === "") {
+  //     this.classLE = 'normal';
+  //   } else {
+  //     this.classLE = 'normal-clicked-no-data';
+  //   }
+  // }
 
-  updateStyleRepeatPassword() {
-    if (this.form.controls['repeatPassword'].value === "") {
-      this.classLRP = 'normal';
-    } else {
-      this.classLRP = 'normal-clicked-no-data';
-    }
-  }
+  // updateStyleMovileNumber() {
+  //   if (this.form.controls['mobileNumber'].value === "") {
+  //     this.classLMN = 'normal';
+  //   } else {
+  //     this.classLMN = 'normal-clicked-no-data';
+  //   }
+  // }
+
+  // updateStylePassword() {
+  //   if (this.form.controls['password'].value === "") {
+  //     this.classLP = 'normal';
+  //   } else {
+  //     this.classLP = 'normal-clicked-no-data';
+  //   }
+  // }
+
+  // updateStyleRepeatPassword() {
+  //   if (this.form.controls['repeatPassword'].value === "") {
+  //     this.classLRP = 'normal';
+  //   } else {
+  //     this.classLRP = 'normal-clicked-no-data';
+  //   }
+  // }
 }

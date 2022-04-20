@@ -77,29 +77,91 @@
       <div class="row content-list">
 
         <ion-list>
-          <form>
-            <ion-item class="ion-no-padding">
-              <div class="content-item">
-                <ion-label position="floating">{{ 'ENTER_EMAIL' | translate }}</ion-label>
-                <ion-input type="text" #email></ion-input>
-              </div>
+          <form [formGroup]="form" novalidate>
+            <!-- email -->
+            <ion-item color="transparent" lines="full">
+              <ion-label position="floating">{{ 'ENTER_EMAIL' | translate }}</ion-label>
+              <ion-input formControlName="email" type="text"></ion-input>
             </ion-item>
 
-            <ion-item class="ion-no-padding">
-              <div class="content-item">
-                <ion-label position="floating">{{ 'ENTER_PASSWORD' | translate }}</ion-label>
-                <ion-input type="password" #password></ion-input>
-              </div>
-            </ion-item>
+            <span class="error ion-padding"
+              *ngIf="f.email.touched && !submitted && f.email.errors?.required && !isSpanish">
+              Email is required
+            </span>
+            <span class="error ion-padding" *ngIf="submitted && f.email.errors?.required && !isSpanish">
+              Email is required
+            </span>
+
+            <span class="error ion-padding"
+              *ngIf="f.email.touched && !submitted && f.email.errors?.email && !isSpanish">
+              Verify your email
+            </span>
+            <span class="error ion-padding" *ngIf="submitted && f.email.errors?.email && !isSpanish">
+              Verify your email
+            </span>
+
+            <span class="error ion-padding"
+              *ngIf="f.email.touched && !submitted && f.email.errors?.required && isSpanish">
+              Correo requerido
+            </span>
+            <span class="error ion-padding" *ngIf="submitted && f.email.errors?.required && isSpanish">
+              Correo requerido
+            </span>
+            <span class="error ion-padding" *ngIf="f.email.touched && !submitted &&f.email.errors?.email && isSpanish">
+              Verifique su correo electrónico
+            </span>
+            <span class="error ion-padding" *ngIf="submitted &&f.email.errors?.email && isSpanish">
+              Verifique su correo electrónico
+            </span>
+
+            <!-- password -->
+        <ion-item color="transparent" lines="full">
+          <ion-label position="floating">{{ 'ENTER_PASSWORD' | translate }}</ion-label>
+
+          <ion-row style="width: 100%;">
+            <ion-col size="10">
+              <ion-input formControlName="password" [type]="passwordType" #password></ion-input>
+            </ion-col>
+            <ion-col size="2">
+              <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-item>
+
+        <span class="error ion-padding"
+          *ngIf="f.password.touched && !submitted && f.password.errors?.required && !isSpanish">
+          Password is required
+        </span>
+        <span class="error ion-padding" *ngIf="submitted && f.password.errors?.required && !isSpanish">
+          Password is required
+        </span>
+
+        <span class="error ion-padding"
+          *ngIf="f.password.touched && !submitted && f.password.errors?.minlength && !isSpanish">
+          Password must be more than 6 characters
+        </span>
+        <span class="error ion-padding" *ngIf="submitted && f.password.errors?.minlength && !isSpanish">
+          La contraseña debe tener más de 6 caracteres
+        </span>
+
+        <span class="error ion-padding"
+          *ngIf="f.password.touched && !submitted && f.password.errors?.required && isSpanish">
+          Campo requerido
+        </span>
+        <span class="error ion-padding" *ngIf="submitted && f.password.errors?.required && isSpanish">
+          Campo requerido
+        </span>
+
           </form>
-          <p>
+          <br />
+          <p class="text-center">
             <a routerLink="/forgot-password" class="vincle-no-style a-forgot-password">
               {{ 'FORGOT_PASSWORD' | translate }}</a>
           </p>
         </ion-list>
       </div>
       <div class="row boton-signup">
-        <button type="button" class="my-color form-control" (click)="onLogin(email, password)">{{ 'LOGIN' | translate
+        <button type="button" class="my-color form-control" (click)="onLogin()">{{ 'LOGIN' | translate
           }}</button>
       </div>
       <!-- <div class="content-line">
@@ -115,7 +177,7 @@
           <img src="../../../assets/icon/Google-icon.png" (click)="onLoginGoogle()" class="icon-google"/>
         </div>
       </div> -->
-      <div class="last-text mt-1">
+      <div class="last-text">
         <p class="text-center last-p">{{ 'NOT_ALREADY_ACOUNT' | translate }}
           <a routerLink="/register" class="text-bold vincle-no-style">{{ 'REGISTER' | translate }}</a>
         </p>
