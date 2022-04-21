@@ -38,7 +38,7 @@ export class MailService {
         let urlLocal = 'http://localhost:3000/api/mail';
         let urlInternet = 'http://18.191.206.117:3000/api/mail'
         return this.http.get(urlInternet, {
-          params: {
+          params: {    
             'fullName':user.fullName,
             'mobileNumber': user.mobileNumber,
             'language': language,
