@@ -21,8 +21,7 @@ export class RegisterPage implements OnInit {
     this.getLanguage();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   getLanguage() {
     this.storage.getString('language').then((data: any) => {

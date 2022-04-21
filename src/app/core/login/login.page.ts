@@ -16,8 +16,6 @@ import { ToastService } from 'src/app/services/toast.service';
 export class LoginPage implements OnInit {
   language: string;
   isSpanish: boolean;
-  // classFacebook: string;
-  // classGoogle: string;
   form: FormGroup;
   submitted: boolean;
 
@@ -32,9 +30,7 @@ export class LoginPage implements OnInit {
   ) {
     this.isFirsTime();
     this.getLanguage();
-    this.isLogged();
-    // this.classFacebook = 'circle-content inactive';
-    // this.classGoogle = 'circle-content inactive';
+    this.isFirstTimeOnLogin();
     this.submitted = false;
     this.form = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
@@ -42,22 +38,14 @@ export class LoginPage implements OnInit {
     });
   }
 
-  passwordType: string = 'password';
-  passwordIcon: string = 'eye-off';
-  hideShowPassword() {
-    this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
-    this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
-  }
-
-  isLogged() {
-    this.storage.getString('hbaUid').then((data: any) => {
-      if (data.value) {
-        this.router.navigate(['/mainscreen']);
+  isFirsTime() {
+    this.storage.getString('firstime').then((data: any) => {
+      if (!data.value) {
+        this.storage.setString('firstime', 'false');
+        this.router.navigate(['/welcome']);
       }
-    })
+    });
   }
-
-  ngOnInit() { }
 
   getLanguage() {
     this.storage.getString('language').then((data: any) => {
@@ -73,14 +61,25 @@ export class LoginPage implements OnInit {
     });
   }
 
-  isFirsTime() {
-    this.storage.getString('firstime').then((data: any) => {
+  isFirstTimeOnLogin() {
+    this.storage.getString('firstimeonlogin').then((data: any) => {
       if (!data.value) {
-        this.storage.setString('firstime', 'false');
-        this.router.navigate(['/welcome']);
+        this.storage.setString('firstimeonlogin', 'false');
+      } else {
+        this.router.navigate(['/mainscreen']);
       }
     });
   }
+
+  passwordType: string = 'password';
+  passwordIcon: string = 'eye-off';
+  hideShowPassword() {
+    this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
+    this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
+  }
+ 
+  ngOnInit() { }
+
   onSelectChange(selectedValue: any) {
     this.language = selectedValue.detail.value;
     this.translate.setDefaultLang(this.language);
@@ -95,7 +94,6 @@ export class LoginPage implements OnInit {
     if (this.form.invalid) {
       return;
     }
-    // todo proccess the data of form login
     var values = this.form.value;
 
     try {
@@ -121,77 +119,30 @@ export class LoginPage implements OnInit {
 
   private redirectUser(isVerified: boolean, user: User) {
     if (isVerified) {
+      let uid: string;
       this.storage.getString('hbaUid').then((res: any) => {
         if (res.value) {
+          uid = res.value;
           this.storage.getObject('hbaUser').then((dataUser: any) => {
+            let user = JSON.parse(dataUser);            
             const data: UserI = {
-              uid: res.value,
-              email: dataUser.email,
-              fullName: dataUser.fullName,
-              mobileNumber: dataUser.mobileNumber
+              uid: uid,
+              email: user.email,
+              fullName: user.fullName,
+              mobileNumber: user.mobileNumber
             };
             this.auth2Service.addUser(data);
             this.router.navigate(['/mainscreen']);
           });
+        } else {
+          //todo hay que ir a firebase y encontrar ese usuario con ese uid
+          this.auth2Service.findUser(user.uid);
+          this.router.navigate(['/mainscreen']);
         }
       });
     } else {
       this.router.navigate(['/verify-email']);
     }
   }
-
-  // ionViewWillEnter() {
-  //   this.getCurrentState();
-  // }
-
-  // async getCurrentState() {
-  //   const result = await Plugins.FacebookLogin.getCurrentAccessToken();
-  //   try {
-  //     console.log(result);
-  //     if (result && result.accessToken) {
-  //       const user = { token: result.accessToken.token, userId: result.accessToken.userId };
-  //       const navigationExtras: NavigationExtras = {
-  //         queryParams: {
-  //           userinfo: JSON.stringify(user)
-  //         }
-  //       };
-  //       this.router.navigate(['/mainscreen'], navigationExtras);
-  //     }
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // }
-
-  // async signIn(): Promise<void> {
-  //   this.classFacebook = 'circle-content active';
-  //   const FACEBOOK_PERMISSIONS = ['public_profile', 'email'];
-
-  //   const result = await Plugins.FacebookLogin.login({ permissions: FACEBOOK_PERMISSIONS });
-  //   if (result && result.accessToken) {
-  //     const user = { token: result.accessToken.token, userId: result.accessToken.userId };
-  //     const navigationExtras: NavigationExtras = {
-  //       queryParams: {
-  //         userinfo: JSON.stringify(user)
-  //       }
-  //     };
-  //     this.router.navigate(['/mainscreen'], navigationExtras);
-  //   }
-  // }
-
-  // async onLoginGoogle() {
-  //   this.classGoogle = 'circle-content active';
-  //   try {
-  //     const user = await this.authSvc.loginGoogle();
-  //     if (user) {
-  //       const isVerified = this.authSvc.isEmailVerified(user);
-  //       this.redirectUser(isVerified);
-  //       console.log(user);
-  //     }
-  //   }
-  //   catch (error) {
-  //     console.log('Error-->', error);
-  //   }
-  // }
-
 
 }

@@ -35,9 +35,11 @@ export class MailService {
 
       this.storage.getObject('hbaUser').then((dataUser: any) => {
         let user = JSON.parse(dataUser);
-        return this.http.get('http://localhost:3000/api/mail', {
+        let urlLocal = 'http://localhost:3000/api/mail';
+        let urlInternet = 'http://18.191.206.117:3000/api/mail'
+        return this.http.get(urlLocal, {
           params: {
-            'fullName': user.fullName,
+            'fullName':user.fullName,
             'mobileNumber': user.mobileNumber,
             'language': language,
             'email': user.email,

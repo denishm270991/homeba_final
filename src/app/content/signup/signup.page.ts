@@ -13,8 +13,6 @@ import { UserI } from '../../interfaces/user';
 export class SignupPage implements OnInit {
   language: string;
   isSpanish: boolean;
-  // classFacebook: string;
-  // classGoogle: string;
   form: FormGroup;
   submitted: boolean;
 
@@ -61,9 +59,7 @@ export class SignupPage implements OnInit {
     if (this.form.invalid) {
       return;
     }
-    // todo to proccess the data of form
     var values = this.form.value;
-
     this.onRegister(values.email, values.password, values);
   }
 
@@ -90,21 +86,6 @@ export class SignupPage implements OnInit {
   saveUser(uid: string, values: any) {   
     this.storage.setObject('hbaUid', uid);
     this.storage.setObject('hbaUser', JSON.stringify(values));
-    
-    // this.storage.getString('hbaUid').then((data: any) => {
-    //   if (!data.value) {
-    //     this.storage.setString('hbaUid', uid);
-    //   } else {
-    //     this.storage.setObject('hbaUid', uid);
-    //   }
-    // });
-    // this.storage.getString('hbaUser').then((data: any) => {
-    //   if (!data.value) {
-    //     this.storage.setObject('hbaUser', JSON.stringify(values));
-    //   } else {
-    //     this.storage.setObject('hbaUser', JSON.stringify(values));
-    //   }
-    // }); 
   }
 
   private redirectUser(isVerified: boolean) {
